@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/177/trunk/src/com/touzbi/ansatest/stringformattertest
+END
+StringFormatterCompositeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/175/trunk/src/com/touzbi/ansatest/stringformattertest/StringFormatterCompositeTest.java
+END
+EdgeCutterStringFormatterTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/127/trunk/src/com/touzbi/ansatest/stringformattertest/EdgeCutterStringFormatterTest.java
+END
+CustomWrapperStringFormatterTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/177/trunk/src/com/touzbi/ansatest/stringformattertest/CustomWrapperStringFormatterTest.java
+END

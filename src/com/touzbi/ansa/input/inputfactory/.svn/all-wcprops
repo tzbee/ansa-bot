@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/187/trunk/src/com/touzbi/ansa/input/inputfactory
+END
+InputFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/161/trunk/src/com/touzbi/ansa/input/inputfactory/InputFactory.java
+END
+AbstractFileInputFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/161/trunk/src/com/touzbi/ansa/input/inputfactory/AbstractFileInputFactory.java
+END
+FileInputFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/187/trunk/src/com/touzbi/ansa/input/inputfactory/FileInputFactory.java
+END
+DirectInputFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/161/trunk/src/com/touzbi/ansa/input/inputfactory/DirectInputFactory.java
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/155/trunk/src/com/touzbi/ansa/util/filereaderstrategy
+END
+JarDirectoryRelativeFileReaderStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/144/trunk/src/com/touzbi/ansa/util/filereaderstrategy/JarDirectoryRelativeFileReaderStrategy.java
+END
+ClassPathRelativeFileReaderStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/144/trunk/src/com/touzbi/ansa/util/filereaderstrategy/ClassPathRelativeFileReaderStrategy.java
+END
+AbstractFileReaderStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/155/trunk/src/com/touzbi/ansa/util/filereaderstrategy/AbstractFileReaderStrategy.java
+END
+FileReaderStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/144/trunk/src/com/touzbi/ansa/util/filereaderstrategy/FileReaderStrategy.java
+END
+URLFileReaderStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/155/trunk/src/com/touzbi/ansa/util/filereaderstrategy/URLFileReaderStrategy.java
+END

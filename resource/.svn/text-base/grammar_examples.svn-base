@@ -1,0 +1,16 @@
+
+## Simple httprequest
+command=httprequest;
+
+## Gets document content using regex
+command=contentgrabber(regex:'.*up.*');
+
+## Gets document link using css-style query
+command=contentgrabber(link: 'a.div#header');
+
+## Gets document tag element content using css-style query
+command=contentgrabber(text: 'script');
+
+
+## Gets document content combining multiple queries
+command=contentgrabber(text: 'script', regex:'http://.*');

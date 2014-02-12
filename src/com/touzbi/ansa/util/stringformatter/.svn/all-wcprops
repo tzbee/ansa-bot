@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/175/trunk/src/com/touzbi/ansa/util/stringformatter
+END
+StringFormatterComposite.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/127/trunk/src/com/touzbi/ansa/util/stringformatter/StringFormatterComposite.java
+END
+EdgeCutterStringFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/127/trunk/src/com/touzbi/ansa/util/stringformatter/EdgeCutterStringFormatter.java
+END
+BasicStringFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/127/trunk/src/com/touzbi/ansa/util/stringformatter/BasicStringFormatter.java
+END
+ReplacingFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/127/trunk/src/com/touzbi/ansa/util/stringformatter/ReplacingFormatter.java
+END
+StringFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/127/trunk/src/com/touzbi/ansa/util/stringformatter/StringFormatter.java
+END
+CustomWrapperStringFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/138/trunk/src/com/touzbi/ansa/util/stringformatter/CustomWrapperStringFormatter.java
+END

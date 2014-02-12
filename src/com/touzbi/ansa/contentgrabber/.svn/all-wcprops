@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/142/trunk/src/com/touzbi/ansa/contentgrabber
+END
+ContentGrabberComposite.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/127/trunk/src/com/touzbi/ansa/contentgrabber/ContentGrabberComposite.java
+END
+AbstractContentGrabber.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/127/trunk/src/com/touzbi/ansa/contentgrabber/AbstractContentGrabber.java
+END
+InnerHTMLContentGrabber.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/127/trunk/src/com/touzbi/ansa/contentgrabber/InnerHTMLContentGrabber.java
+END
+ContentGrabber.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/127/trunk/src/com/touzbi/ansa/contentgrabber/ContentGrabber.java
+END
+CustomLinkGrabber.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/127/trunk/src/com/touzbi/ansa/contentgrabber/CustomLinkGrabber.java
+END
+TextContentGrabber.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/127/trunk/src/com/touzbi/ansa/contentgrabber/TextContentGrabber.java
+END
+AbstractLinkGrabber.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/127/trunk/src/com/touzbi/ansa/contentgrabber/AbstractLinkGrabber.java
+END
+AttributeGrabber.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/127/trunk/src/com/touzbi/ansa/contentgrabber/AttributeGrabber.java
+END
+AbstractCSSQueryContentGrabber.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/142/trunk/src/com/touzbi/ansa/contentgrabber/AbstractCSSQueryContentGrabber.java
+END
+RegexContentGrabber.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/142/trunk/src/com/touzbi/ansa/contentgrabber/RegexContentGrabber.java
+END

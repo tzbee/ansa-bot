@@ -1,0 +1,17 @@
+SINGLE_QUOTE=9
+QUOTED_STRING=8
+WS=10
+PARAM_DELIMITER=7
+PARAM_ID=6
+T__1=4
+T__0=5
+T__3=2
+T__2=3
+T__4=1
+':'=7
+'('=5
+'['=4
+','=3
+')'=2
+'\''=9
+']'=1

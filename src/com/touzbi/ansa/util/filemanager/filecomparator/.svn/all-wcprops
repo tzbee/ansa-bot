@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/136/trunk/src/com/touzbi/ansa/util/filemanager/filecomparator
+END
+MyFileComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/136/trunk/src/com/touzbi/ansa/util/filemanager/filecomparator/MyFileComparator.java
+END
+FileComparatorComposite.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/136/trunk/src/com/touzbi/ansa/util/filemanager/filecomparator/FileComparatorComposite.java
+END
+ChecksumFileComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/136/trunk/src/com/touzbi/ansa/util/filemanager/filecomparator/ChecksumFileComparator.java
+END
+SizeFileComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/136/trunk/src/com/touzbi/ansa/util/filemanager/filecomparator/SizeFileComparator.java
+END
+FileComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/136/trunk/src/com/touzbi/ansa/util/filemanager/filecomparator/FileComparator.java
+END
