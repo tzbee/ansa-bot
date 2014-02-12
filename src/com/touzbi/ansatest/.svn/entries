@@ -1,178 +1,0 @@
-10
-
-dir
-192
-https://project-x-util-libs.googlecode.com/svn/trunk/src/com/touzbi/ansatest
-https://project-x-util-libs.googlecode.com/svn
-
-
-
-2014-02-11T14:17:47.092989Z
-192
-tolbimine@gmail.com
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-ff617dec-03f0-7232-9b65-b5c15fa573ba
-
-antlrwrappertest
-dir
-
-app.ansa
-file
-
-
-
-
-2014-02-11T09:50:24.000000Z
-4ea9effd086437e4828298d013e13117
-2014-02-11T14:17:47.092989Z
-192
-tolbimine@gmail.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-51
-
-app_template.ansa
-file
-
-
-
-
-2014-02-07T19:08:32.000000Z
-8ffb74c10d98886b67b5ba8b7ddd1415
-2014-02-02T17:50:13.794080Z
-155
-tolbimine@gmail.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1395
-
-checksumtest
-dir
-
-commandtest
-dir
-
-configtest
-dir
-
-contentgrabbertest
-dir
-
-downloadtest
-dir
-
-filecomparatortest
-dir
-
-filecontentwrappertest
-dir
-
-filemanagertest
-dir
-
-filereadertest
-dir
-
-input.cfg
-file
-
-
-
-
-2014-02-07T19:08:32.000000Z
-68589b2a1241e3bc10ccea2f159efbca
-2014-02-01T20:27:00.660439Z
-144
-tolbimine@gmail.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-23
-
-inputfactorytest
-dir
-
-maintest
-dir
-
-multimaptest
-dir
-
-requesthandlerstrategytest
-dir
-
-stringfiltertest
-dir
-
-stringformattertest
-dir
-

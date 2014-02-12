@@ -1,67 +1,0 @@
-10
-
-dir
-192
-https://project-x-util-libs.googlecode.com/svn/trunk/src/com/touzbi/ansa
-https://project-x-util-libs.googlecode.com/svn
-
-
-
-2014-02-11T14:17:47.092989Z
-192
-tolbimine@gmail.com
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-ff617dec-03f0-7232-9b65-b5c15fa573ba
-
-ansagrammar
-dir
-
-antlr
-dir
-
-app
-dir
-
-command
-dir
-
-contentgrabber
-dir
-
-download
-dir
-
-filecontentwrapper
-dir
-
-htmlelement
-dir
-
-input
-dir
-
-launcher
-dir
-
-main
-dir
-
-requesthandlerstrategy
-dir
-
-util
-dir
-

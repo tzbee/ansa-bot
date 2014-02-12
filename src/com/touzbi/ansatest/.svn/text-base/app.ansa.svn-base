@@ -1,6 +1,0 @@
-
-
-setinput(file:'input.cfg');
-getcontent;
-sysout;
-
