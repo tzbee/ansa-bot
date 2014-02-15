@@ -15,8 +15,7 @@ import com.touzbi.ansa.htmlelement.htmlelementgrabber.JSoupHTMLElementGrabber;
  * Skeletal implementation of a ContentGrabber using CSS-style queries to get
  * xml content
  */
-public abstract class AbstractCSSQueryContentGrabber extends
-		AbstractContentGrabber {
+public abstract class AbstractCSSQueryContentGrabber implements ContentGrabber {
 	private static final Logger LOGGER = LogManager.getLogger();
 
 	protected HTMLElementGrabber htmlElementGrabber = new JSoupHTMLElementGrabber();

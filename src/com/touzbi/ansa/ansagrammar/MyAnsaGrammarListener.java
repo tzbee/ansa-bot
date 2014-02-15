@@ -16,7 +16,6 @@ import com.touzbi.ansa.command.HTTPRequestCommand;
 import com.touzbi.ansa.command.InputCommand;
 import com.touzbi.ansa.command.SysoutCommand;
 import com.touzbi.ansa.command.commandbuilder.CommandBuilder;
-import com.touzbi.ansa.contentgrabber.ContentGrabberComposite;
 import com.touzbi.ansa.util.stringformatter.EdgeCutterStringFormatter;
 import com.touzbi.ansa.util.stringformatter.StringFormatter;
 
@@ -29,9 +28,6 @@ public class MyAnsaGrammarListener extends AnsaGrammarBaseListener {
 
 	// Tmp references
 	private Command currentCommand;
-
-	// Content grabber
-	private ContentGrabberComposite currentContentGrabber = new ContentGrabberComposite();
 
 	public MyAnsaGrammarListener(CommandBuilder commandBuilder) {
 		this.commandBuilder = commandBuilder;

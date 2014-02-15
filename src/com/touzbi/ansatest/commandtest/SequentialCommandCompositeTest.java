@@ -24,7 +24,7 @@ public class SequentialCommandCompositeTest {
 		sequentialCommandComposite.addInput(INPUTS);
 
 		sequentialCommandComposite.execute();
-		
+
 		System.out.println(sequentialCommandComposite.getOutput());
 	}
 }

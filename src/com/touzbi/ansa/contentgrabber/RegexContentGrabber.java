@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RegexContentGrabber extends AbstractContentGrabber {
+public class RegexContentGrabber implements ContentGrabber {
 	private String regex;
 
 	public RegexContentGrabber(String regex) {
