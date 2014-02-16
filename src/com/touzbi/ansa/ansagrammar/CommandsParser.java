@@ -18,14 +18,15 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 public class CommandsParser extends Parser {
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache = new PredictionContextCache();
-	public static final int GET_CONTENT = 1, HTTP_REQUEST = 2, SYSOUT = 3,
-			INPUT = 4;
-	public static final String[] tokenNames = { "<INVALID>", "'getcontent'",
-			"'httprequest'", "'sysout'", "'setinput'" };
-	public static final int RULE_commandId = 0, RULE_getcontent = 1,
-			RULE_httprequest = 2, RULE_sysout = 3, RULE_input = 4;
-	public static final String[] ruleNames = { "commandId", "getcontent",
-			"httprequest", "sysout", "input" };
+	public static final int FORMAT = 1, GET_CONTENT = 2, HTTP_REQUEST = 3,
+			SYSOUT = 4, INPUT = 5;
+	public static final String[] tokenNames = { "<INVALID>", "'format'",
+			"'getcontent'", "'httprequest'", "'sysout'", "'setinput'" };
+	public static final int RULE_commandId = 0, RULE_format = 1,
+			RULE_getcontent = 2, RULE_httprequest = 3, RULE_sysout = 4,
+			RULE_input = 5;
+	public static final String[] ruleNames = { "commandId", "format",
+			"getcontent", "httprequest", "sysout", "input" };
 
 	@Override
 	public String getGrammarFileName() {
@@ -62,6 +63,10 @@ public class CommandsParser extends Parser {
 			return getRuleContext(HttprequestContext.class, 0);
 		}
 
+		public FormatContext format() {
+			return getRuleContext(FormatContext.class, 0);
+		}
+
 		public InputContext input() {
 			return getRuleContext(InputContext.class, 0);
 		}
@@ -96,38 +101,91 @@ public class CommandsParser extends Parser {
 		CommandIdContext _localctx = new CommandIdContext(_ctx, getState());
 		enterRule(_localctx, 0, RULE_commandId);
 		try {
-			setState(14);
+			setState(17);
 			switch (_input.LA(1)) {
 			case SYSOUT:
 				enterOuterAlt(_localctx, 1);
 				{
-					setState(10);
+					setState(12);
 					sysout();
 				}
 				break;
 			case INPUT:
 				enterOuterAlt(_localctx, 2);
 				{
-					setState(11);
+					setState(13);
 					input();
 				}
 				break;
 			case HTTP_REQUEST:
 				enterOuterAlt(_localctx, 3);
 				{
-					setState(12);
+					setState(14);
 					httprequest();
 				}
 				break;
 			case GET_CONTENT:
 				enterOuterAlt(_localctx, 4);
 				{
-					setState(13);
+					setState(15);
 					getcontent();
+				}
+				break;
+			case FORMAT:
+				enterOuterAlt(_localctx, 5);
+				{
+					setState(16);
+					format();
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
+			}
+		} catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		} finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class FormatContext extends ParserRuleContext {
+		public TerminalNode FORMAT() {
+			return getToken(CommandsParser.FORMAT, 0);
+		}
+
+		public FormatContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+
+		@Override
+		public int getRuleIndex() {
+			return RULE_format;
+		}
+
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if (listener instanceof CommandsListener)
+				((CommandsListener) listener).enterFormat(this);
+		}
+
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if (listener instanceof CommandsListener)
+				((CommandsListener) listener).exitFormat(this);
+		}
+	}
+
+	public final FormatContext format() throws RecognitionException {
+		FormatContext _localctx = new FormatContext(_ctx, getState());
+		enterRule(_localctx, 2, RULE_format);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+				setState(19);
+				match(FORMAT);
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -168,11 +226,11 @@ public class CommandsParser extends Parser {
 
 	public final GetcontentContext getcontent() throws RecognitionException {
 		GetcontentContext _localctx = new GetcontentContext(_ctx, getState());
-		enterRule(_localctx, 2, RULE_getcontent);
+		enterRule(_localctx, 4, RULE_getcontent);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(16);
+				setState(21);
 				match(GET_CONTENT);
 			}
 		} catch (RecognitionException re) {
@@ -214,11 +272,11 @@ public class CommandsParser extends Parser {
 
 	public final HttprequestContext httprequest() throws RecognitionException {
 		HttprequestContext _localctx = new HttprequestContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_httprequest);
+		enterRule(_localctx, 6, RULE_httprequest);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(18);
+				setState(23);
 				match(HTTP_REQUEST);
 			}
 		} catch (RecognitionException re) {
@@ -260,11 +318,11 @@ public class CommandsParser extends Parser {
 
 	public final SysoutContext sysout() throws RecognitionException {
 		SysoutContext _localctx = new SysoutContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_sysout);
+		enterRule(_localctx, 8, RULE_sysout);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(20);
+				setState(25);
 				match(SYSOUT);
 			}
 		} catch (RecognitionException re) {
@@ -306,11 +364,11 @@ public class CommandsParser extends Parser {
 
 	public final InputContext input() throws RecognitionException {
 		InputContext _localctx = new InputContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_input);
+		enterRule(_localctx, 10, RULE_input);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(22);
+				setState(27);
 				match(INPUT);
 			}
 		} catch (RecognitionException re) {
@@ -323,13 +381,15 @@ public class CommandsParser extends Parser {
 		return _localctx;
 	}
 
-	public static final String _serializedATN = "\3\uacf5\uee8c\u4f5d\u8b0d\u4a45\u78bd\u1b2f\u3378\3\6\33\4\2\t\2\4\3"
-			+ "\t\3\4\4\t\4\4\5\t\5\4\6\t\6\3\2\3\2\3\2\3\2\5\2\21\n\2\3\3\3\3\3\4\3"
-			+ "\4\3\5\3\5\3\6\3\6\3\6\2\7\2\4\6\b\n\2\2\30\2\20\3\2\2\2\4\22\3\2\2\2"
-			+ "\6\24\3\2\2\2\b\26\3\2\2\2\n\30\3\2\2\2\f\21\5\b\5\2\r\21\5\n\6\2\16\21"
-			+ "\5\6\4\2\17\21\5\4\3\2\20\f\3\2\2\2\20\r\3\2\2\2\20\16\3\2\2\2\20\17\3"
-			+ "\2\2\2\21\3\3\2\2\2\22\23\7\3\2\2\23\5\3\2\2\2\24\25\7\4\2\2\25\7\3\2"
-			+ "\2\2\26\27\7\5\2\2\27\t\3\2\2\2\30\31\7\6\2\2\31\13\3\2\2\2\3\20";
+	public static final String _serializedATN = "\3\uacf5\uee8c\u4f5d\u8b0d\u4a45\u78bd\u1b2f\u3378\3\7 \4\2\t\2\4\3\t"
+			+ "\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\3\2\3\2\3\2\3\2\3\2\5\2\24\n\2\3\3"
+			+ "\3\3\3\4\3\4\3\5\3\5\3\6\3\6\3\7\3\7\3\7\2\b\2\4\6\b\n\f\2\2\35\2\23\3"
+			+ "\2\2\2\4\25\3\2\2\2\6\27\3\2\2\2\b\31\3\2\2\2\n\33\3\2\2\2\f\35\3\2\2"
+			+ "\2\16\24\5\n\6\2\17\24\5\f\7\2\20\24\5\b\5\2\21\24\5\6\4\2\22\24\5\4\3"
+			+ "\2\23\16\3\2\2\2\23\17\3\2\2\2\23\20\3\2\2\2\23\21\3\2\2\2\23\22\3\2\2"
+			+ "\2\24\3\3\2\2\2\25\26\7\3\2\2\26\5\3\2\2\2\27\30\7\4\2\2\30\7\3\2\2\2"
+			+ "\31\32\7\5\2\2\32\t\3\2\2\2\33\34\7\6\2\2\34\13\3\2\2\2\35\36\7\7\2\2"
+			+ "\36\r\3\2\2\2\3\23";
 	public static final ATN _ATN = ATNSimulator.deserialize(_serializedATN
 			.toCharArray());
 	static {

@@ -26,6 +26,22 @@ public interface CommandsListener extends ParseTreeListener {
 	void exitInput(@NotNull CommandsParser.InputContext ctx);
 
 	/**
+	 * Enter a parse tree produced by {@link CommandsParser#format}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void enterFormat(@NotNull CommandsParser.FormatContext ctx);
+
+	/**
+	 * Exit a parse tree produced by {@link CommandsParser#format}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void exitFormat(@NotNull CommandsParser.FormatContext ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link CommandsParser#commandId}.
 	 * 
 	 * @param ctx

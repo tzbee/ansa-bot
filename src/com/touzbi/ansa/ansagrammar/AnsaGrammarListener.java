@@ -58,6 +58,22 @@ public interface AnsaGrammarListener extends ParseTreeListener {
 	void exitCommandId(@NotNull AnsaGrammarParser.CommandIdContext ctx);
 
 	/**
+	 * Enter a parse tree produced by {@link AnsaGrammarParser#format}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void enterFormat(@NotNull AnsaGrammarParser.FormatContext ctx);
+
+	/**
+	 * Exit a parse tree produced by {@link AnsaGrammarParser#format}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void exitFormat(@NotNull AnsaGrammarParser.FormatContext ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link AnsaGrammarParser#paramValue}.
 	 * 
 	 * @param ctx

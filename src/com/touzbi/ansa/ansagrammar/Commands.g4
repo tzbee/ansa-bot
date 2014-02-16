@@ -6,6 +6,17 @@ commandId
 	| input
 	| httprequest
 	| getcontent
+	| format
+;
+ 
+format
+:
+	FORMAT
+;
+
+FORMAT
+:
+	'format'
 ;
 
 getcontent

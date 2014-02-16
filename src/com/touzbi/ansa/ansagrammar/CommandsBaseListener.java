@@ -36,6 +36,24 @@ public class CommandsBaseListener implements CommandsListener {
 	 * The default implementation does nothing.
 	 */
 	@Override
+	public void enterFormat(@NotNull CommandsParser.FormatContext ctx) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override
+	public void exitFormat(@NotNull CommandsParser.FormatContext ctx) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override
 	public void enterCommandId(@NotNull CommandsParser.CommandIdContext ctx) {
 	}
 
