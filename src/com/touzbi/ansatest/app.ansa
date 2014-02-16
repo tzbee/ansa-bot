@@ -1,4 +1,4 @@
 setinput(str:'haha');
-getcontent(link:'a');
+
 sysout;
 

@@ -1,11 +1,11 @@
-package com.touzbi.ansatest.configtest;
+package com.touzbi.ansatest.commandfactorytest;
 
 import org.junit.Test;
 
 import com.touzbi.ansa.command.commandfactory.AnsaCommandFactory;
 import com.touzbi.ansa.command.commandfactory.CommandFactory;
 
-public class AnsaConfigFactoryTest {
+public class AnsaCommandFactoryTest {
 	private static final String PACKAGE_PATH = "com/touzbi/ansatest/";
 	private static final String FILE_PATH = PACKAGE_PATH + "app.ansa";
 
