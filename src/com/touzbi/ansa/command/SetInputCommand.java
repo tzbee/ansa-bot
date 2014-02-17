@@ -22,4 +22,9 @@ public class SetInputCommand extends AbstractCommand {
 
 		addOutput(results);
 	}
+
+	@Override
+	public String toString() {
+		return "Set input command - " + super.toString();
+	}
 }

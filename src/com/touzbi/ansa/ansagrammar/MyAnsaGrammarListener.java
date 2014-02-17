@@ -70,6 +70,10 @@ public class MyAnsaGrammarListener extends AnsaGrammarBaseListener {
 		this.currentCommand = new FormatStringCommand();
 	}
 
+	/**
+	 * Params
+	 */
+
 	@Override
 	public void exitParamPair(ParamPairContext ctx) {
 		String paramName = ctx.paramName().getText();
@@ -83,6 +87,8 @@ public class MyAnsaGrammarListener extends AnsaGrammarBaseListener {
 		}
 
 		this.currentCommand.addParams(paramName, paramValues);
+		
+		System.out.println(this.currentCommand);
 	}
 
 	@Override
