@@ -16,8 +16,8 @@ public class HTTPRequestCommand extends AbstractCommand {
 
 	@Override
 	public void execute() {
-		for (String url : getParamValues("input")) {
-			addParams("output", this.requestStrategy.getPage(url));
+		for (String url : getInput()) {
+			addOutput(this.requestStrategy.getPage(url));
 		}
 	}
 
