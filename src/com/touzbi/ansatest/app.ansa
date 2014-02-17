@@ -1,4 +1,3 @@
-setinput(str:'haha');
-
+setinput(text:'haha');
 sysout;
 

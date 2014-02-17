@@ -7,6 +7,6 @@ public class SysoutCommand extends PrintCommand {
 
 	@Override
 	public String toString() {
-		return "Sysout command - inputs: " + getParamValues("input");
+		return "Sysout command - " + super.toString();
 	}
 }

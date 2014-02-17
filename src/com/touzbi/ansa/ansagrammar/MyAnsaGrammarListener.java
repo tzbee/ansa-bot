@@ -15,7 +15,7 @@ import com.touzbi.ansa.command.Command;
 import com.touzbi.ansa.command.FormatStringCommand;
 import com.touzbi.ansa.command.GetContentCommand;
 import com.touzbi.ansa.command.HTTPRequestCommand;
-import com.touzbi.ansa.command.InputCommand;
+import com.touzbi.ansa.command.SetInputCommand;
 import com.touzbi.ansa.command.SysoutCommand;
 import com.touzbi.ansa.command.commandbuilder.CommandBuilder;
 import com.touzbi.ansa.util.stringformatter.EdgeCutterStringFormatter;
@@ -52,7 +52,7 @@ public class MyAnsaGrammarListener extends AnsaGrammarBaseListener {
 
 	@Override
 	public void exitInput(InputContext ctx) {
-		this.currentCommand = new InputCommand();
+		this.currentCommand = new SetInputCommand();
 	}
 
 	@Override

@@ -11,8 +11,8 @@ public class AnsaCommandFactoryTest {
 
 	@Test
 	public void test() {
-		CommandFactory configFactory = new AnsaCommandFactory(FILE_PATH, false);
+		CommandFactory commandFactory = new AnsaCommandFactory(FILE_PATH, false);
 
-		System.out.println("Commands: " + configFactory.getCommands());
+		System.out.println("Commands: " + commandFactory.getCommands());
 	}
 }

@@ -7,6 +7,7 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
 public abstract class AbstractCommand implements Command {
+
 	// Default params
 	private static final String INPUT_PARAM = "input";
 	private static final String OUTPUT_PARAM = "output";
@@ -56,5 +57,10 @@ public abstract class AbstractCommand implements Command {
 	@Override
 	public Collection<String> getInput() {
 		return getParamValues(INPUT_PARAM);
+	}
+
+	@Override
+	public String toString() {
+		return "inputs: " + getInput() + " - output: " + getOutput();
 	}
 }
