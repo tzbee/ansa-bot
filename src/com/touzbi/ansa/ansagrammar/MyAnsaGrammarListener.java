@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.CommandBlockContext;
+import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.DownloadContext;
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.FormatContext;
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.GetcontentContext;
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.HttprequestContext;
@@ -11,6 +12,7 @@ import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.InputContext;
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.ParamPairContext;
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.ParamValueContext;
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.SysoutContext;
+import com.touzbi.ansa.command.ChromeDownloadCommand;
 import com.touzbi.ansa.command.Command;
 import com.touzbi.ansa.command.FormatStringCommand;
 import com.touzbi.ansa.command.GetContentCommand;
@@ -70,6 +72,12 @@ public class MyAnsaGrammarListener extends AnsaGrammarBaseListener {
 		this.currentCommand = new FormatStringCommand();
 	}
 
+	@Override
+	public void exitDownload(DownloadContext ctx) {
+		// TODO Chrome is the default download manager for now
+		this.currentCommand = new ChromeDownloadCommand();
+	}
+
 	/**
 	 * Params
 	 */
@@ -87,7 +95,7 @@ public class MyAnsaGrammarListener extends AnsaGrammarBaseListener {
 		}
 
 		this.currentCommand.addParams(paramName, paramValues);
-		
+
 		System.out.println(this.currentCommand);
 	}
 

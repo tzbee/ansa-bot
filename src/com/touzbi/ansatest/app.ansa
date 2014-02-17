@@ -1,4 +1,13 @@
-setinput(text:'haha');
-format(prefix:'mmm',suffix:'ppp');
-sysout;
+setinput(text:'http://google.com');
+
+
+
+## format(prefix:'http://motherless.com/term/');
+
+## httprequest;
+
+## getcontent(link:'div.content-inner div.video a.img-container');
+
+## sysout;
+
 

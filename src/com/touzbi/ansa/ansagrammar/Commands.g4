@@ -7,8 +7,19 @@ commandId
 	| httprequest
 	| getcontent
 	| format
+	| download
 ;
- 
+
+download
+:
+	DOWNLOAD
+;
+
+DOWNLOAD
+:
+	'download'
+;
+
 format
 :
 	FORMAT

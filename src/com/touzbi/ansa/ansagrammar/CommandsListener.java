@@ -20,6 +20,17 @@ public interface CommandsListener extends ParseTreeListener {
 	void exitInput(@NotNull CommandsParser.InputContext ctx);
 
 	/**
+	 * Enter a parse tree produced by {@link CommandsParser#download}.
+	 * @param ctx the parse tree
+	 */
+	void enterDownload(@NotNull CommandsParser.DownloadContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CommandsParser#download}.
+	 * @param ctx the parse tree
+	 */
+	void exitDownload(@NotNull CommandsParser.DownloadContext ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link CommandsParser#format}.
 	 * @param ctx the parse tree
 	 */

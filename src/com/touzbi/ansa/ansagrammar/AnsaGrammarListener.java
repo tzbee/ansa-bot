@@ -31,6 +31,17 @@ public interface AnsaGrammarListener extends ParseTreeListener {
 	void exitInit(@NotNull AnsaGrammarParser.InitContext ctx);
 
 	/**
+	 * Enter a parse tree produced by {@link AnsaGrammarParser#download}.
+	 * @param ctx the parse tree
+	 */
+	void enterDownload(@NotNull AnsaGrammarParser.DownloadContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link AnsaGrammarParser#download}.
+	 * @param ctx the parse tree
+	 */
+	void exitDownload(@NotNull AnsaGrammarParser.DownloadContext ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link AnsaGrammarParser#commandId}.
 	 * @param ctx the parse tree
 	 */

@@ -30,6 +30,19 @@ public class CommandsBaseListener implements CommandsListener {
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
+	@Override public void enterDownload(@NotNull CommandsParser.DownloadContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitDownload(@NotNull CommandsParser.DownloadContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
 	@Override public void enterFormat(@NotNull CommandsParser.FormatContext ctx) { }
 	/**
 	 * {@inheritDoc}
