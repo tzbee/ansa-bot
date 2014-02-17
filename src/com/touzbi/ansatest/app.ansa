@@ -1,3 +1,4 @@
 setinput(text:'haha');
+format(prefix:'mmm',suffix:'ppp');
 sysout;
 

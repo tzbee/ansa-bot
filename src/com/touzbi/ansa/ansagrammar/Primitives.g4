@@ -8,10 +8,10 @@ QUOTED_STRING
 fragment
 STRING
 :
-	~[\n\r]+
+	~[\n\r]+?
 ;
 
-SINGLE_QUOTE 
+SINGLE_QUOTE
 :
 	'\''
 ;
