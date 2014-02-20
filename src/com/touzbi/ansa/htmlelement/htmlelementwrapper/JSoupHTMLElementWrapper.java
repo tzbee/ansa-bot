@@ -1,11 +1,6 @@
 package com.touzbi.ansa.htmlelement.htmlelementwrapper;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
-import org.jsoup.select.Selector;
 
 public class JSoupHTMLElementWrapper implements HTMLElementWrapper {
 	private Element element;
@@ -22,5 +17,10 @@ public class JSoupHTMLElementWrapper implements HTMLElementWrapper {
 	@Override
 	public String toString() {
 		return this.element.toString();
+	}
+
+	@Override
+	public String getInnerHTML() {
+		return this.element.html();
 	}
 }
