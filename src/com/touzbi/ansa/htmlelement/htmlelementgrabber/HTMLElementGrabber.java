@@ -1,9 +1,10 @@
 package com.touzbi.ansa.htmlelement.htmlelementgrabber;
 
-import java.util.List;
+import java.util.Collection;
 
-import com.touzbi.ansa.htmlelement.HTMLElement;
+import com.touzbi.ansa.htmlelement.htmlelementwrapper.HTMLElementWrapper;
 
 public interface HTMLElementGrabber {
-	List<HTMLElement> getElements(String htmlPage, String query);
+	Collection<HTMLElementWrapper> getElementsFromQuery(String document,
+			String query);
 }
