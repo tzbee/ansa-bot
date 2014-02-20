@@ -1,6 +1,6 @@
-setinput(text:'http://google.com');
-
-
+setinput(text:'<a href="hihihi"></a><a> href="hohoho"</a>');
+getcontent(html-element:'a');
+sysout;
 
 ## format(prefix:'http://motherless.com/term/');
 

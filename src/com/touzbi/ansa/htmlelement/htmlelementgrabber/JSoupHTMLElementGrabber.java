@@ -13,8 +13,9 @@ import com.touzbi.ansa.htmlelement.htmlelementwrapper.JSoupHTMLElementWrapper;
 public class JSoupHTMLElementGrabber implements HTMLElementGrabber {
 
 	@Override
-	public Collection<HTMLElementWrapper> getElementsFromQuery(String document,
-			String query) {
+	public Collection<HTMLElementWrapper> getHTMLElements(String query,
+			String document) {
+
 		Collection<HTMLElementWrapper> results = new ArrayList<HTMLElementWrapper>();
 		Collection<Element> elements = Selector.select(query,
 				Jsoup.parse(document).body());

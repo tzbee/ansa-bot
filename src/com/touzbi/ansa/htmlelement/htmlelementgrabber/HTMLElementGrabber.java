@@ -5,6 +5,5 @@ import java.util.Collection;
 import com.touzbi.ansa.htmlelement.htmlelementwrapper.HTMLElementWrapper;
 
 public interface HTMLElementGrabber {
-	Collection<HTMLElementWrapper> getElementsFromQuery(String document,
-			String query);
+	Collection<HTMLElementWrapper> getHTMLElements(String query, String document);
 }

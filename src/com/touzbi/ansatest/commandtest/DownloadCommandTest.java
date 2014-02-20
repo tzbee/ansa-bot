@@ -2,8 +2,8 @@ package com.touzbi.ansatest.commandtest;
 
 import org.junit.Test;
 
-import com.touzbi.ansa.command.Command;
 import com.touzbi.ansa.command.ChromeDownloadCommand;
+import com.touzbi.ansa.command.Command;
 
 public class DownloadCommandTest {
 	@Test

@@ -2,24 +2,25 @@ package com.touzbi.ansa.command;
 
 import java.util.Collection;
 
-import com.touzbi.ansa.contentgrabber.CustomLinkGrabber;
+import com.touzbi.ansa.contentgrabber.HTMLElementContentGrabber;
 
 public class GetContentCommand extends AbstractCommand {
-	private static final String LINK_PARAM = "link";
+	private static final String HTML_ELEMENT_PARAM = "html-element";
 
 	@Override
 	public void execute() {
-		Collection<String> linkQueries = getParamValues(LINK_PARAM);
+		Collection<String> htmlElementQueries = getParamValues(HTML_ELEMENT_PARAM);
 
-		for (String linkQuery : linkQueries) {
+		for (String htmlElementQuery : htmlElementQueries) {
 			for (String input : getInput()) {
-				addOutput(new CustomLinkGrabber(linkQuery).getContent(input));
+				addOutput(new HTMLElementContentGrabber().getContent(
+						htmlElementQuery, input));
 			}
 		}
 	}
 
 	@Override
 	public String toString() {
-		return "Content grabber command";
+		return "Get content command - " + super.toString();
 	}
 }

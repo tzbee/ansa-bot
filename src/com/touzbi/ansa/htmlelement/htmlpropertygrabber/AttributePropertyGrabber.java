@@ -1,8 +1,8 @@
-package com.touzbi.ansa.htmlelement.elementpropertygrabber;
+package com.touzbi.ansa.htmlelement.htmlpropertygrabber;
 
 import com.touzbi.ansa.htmlelement.htmlelementwrapper.HTMLElementWrapper;
 
-public class AttributePropertyGrabber implements ElementPropertyGrabber {
+public class AttributePropertyGrabber implements HTMLPropertyGrabber {
 	private String attributeName;
 
 	public AttributePropertyGrabber(String attributeName) {

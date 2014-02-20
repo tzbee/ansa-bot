@@ -7,13 +7,13 @@ import com.touzbi.ansa.command.GetContentCommand;
 
 public class GetContentCommandTest {
 	private static final String INPUT = "<html><head></head><body><a href=\"test\"></a></body></html>";
-	private static final String PARAM_NAME = "link";
+	private static final String PARAM_NAME = "html-element";
 
 	@Test
 	public void test() {
 		Command command = new GetContentCommand();
 
-		command.addParams(PARAM_NAME, "a");
+		command.addParams(PARAM_NAME, "a[href=test]");
 		command.addInput(INPUT);
 
 		command.execute();
