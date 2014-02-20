@@ -4,12 +4,12 @@ import java.util.Collection;
 
 import com.touzbi.ansa.contentgrabber.HTMLElementContentGrabber;
 
-public class GetContentCommand extends AbstractCommand {
-	private static final String HTML_ELEMENT_PARAM = "html-element";
+public class HTMLQueryCommand extends AbstractCommand {
+	private static final String QUERY_PARAM = "query";
 
 	@Override
 	public void execute() {
-		Collection<String> htmlElementQueries = getParamValues(HTML_ELEMENT_PARAM);
+		Collection<String> htmlElementQueries = getParamValues(QUERY_PARAM);
 
 		for (String htmlElementQuery : htmlElementQueries) {
 			for (String input : getInput()) {
@@ -21,6 +21,6 @@ public class GetContentCommand extends AbstractCommand {
 
 	@Override
 	public String toString() {
-		return "Get content command - " + super.toString();
+		return "Get command - " + super.toString();
 	}
 }

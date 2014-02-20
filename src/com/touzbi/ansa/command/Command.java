@@ -3,24 +3,47 @@ package com.touzbi.ansa.command;
 import java.util.Collection;
 
 public interface Command {
+
+	/**
+	 * Add parameters to the command
+	 * 
+	 * @param paramName
+	 *            name of the parameter
+	 * @param paramValues
+	 *            values of the parameter
+	 */
 	void addParams(String paramName, String... paramValues);
 
 	void addParams(String paramName, Collection<String> paramValues);
 
+	Collection<String> getParamValues(String paramName);
+
+	/**
+	 * Add input to the command
+	 * 
+	 * @param inputs
+	 *            inputs
+	 */
 	void addInput(String... inputs);
 
 	void addInput(Collection<String> inputs);
 
-	void addOutput(String... inputs);
+	Collection<String> getInput();
 
-	void addOutput(Collection<String> inputs);
+	/**
+	 * Add output to the command
+	 * 
+	 * @param outputs
+	 */
 
-	Collection<String> getParamValues(String paramName);
+	void addOutput(String... outputs);
+
+	void addOutput(Collection<String> outputs);
 
 	Collection<String> getOutput();
 
-	Collection<String> getInput();
-
+	/**
+	 * Execute the command
+	 */
 	void execute();
-
 }

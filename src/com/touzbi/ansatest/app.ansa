@@ -1,5 +1,5 @@
 setinput(text:'<a href="hihihi"></a><a> href="hohoho"</a>');
-getcontent(html-element:'a');
+getcontent(query:'a');
 sysout;
 
 ## format(prefix:'http://motherless.com/term/');
