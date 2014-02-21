@@ -1,6 +1,6 @@
 package com.touzbi.ansa.htmlelement.htmlpropertygrabber;
 
-import com.touzbi.ansa.htmlelement.htmlelementwrapper.HTMLElementWrapper;
+import com.touzbi.ansa.htmlelement.htmlelement.HTMLElement;
 
 public class AttributePropertyGrabber implements HTMLPropertyGrabber {
 	private String attributeName;
@@ -10,7 +10,7 @@ public class AttributePropertyGrabber implements HTMLPropertyGrabber {
 	}
 
 	@Override
-	public String getProperty(HTMLElementWrapper htmlElement) {
+	public String getProperty(HTMLElement htmlElement) {
 		return htmlElement.getAttributeValue(this.attributeName);
 	}
 }
