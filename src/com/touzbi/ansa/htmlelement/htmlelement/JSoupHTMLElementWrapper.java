@@ -10,15 +10,15 @@ import com.touzbi.ansa.htmlelement.htmlpropertygrabber.AttributePropertyGrabber;
 import com.touzbi.ansa.htmlelement.htmlpropertygrabber.HTMLPropertyGrabber;
 import com.touzbi.ansa.htmlelement.htmlpropertygrabber.InnerHTMLPropertyGrabber;
 
-public class JSoupHTMLElement implements HTMLElement {
+public class JSoupHTMLElementWrapper implements HTMLElementWrapper {
 	private Element element;
 
-	private JSoupHTMLElement(Element element) {
+	private JSoupHTMLElementWrapper(Element element) {
 		this.element = element;
 	}
 
-	public static JSoupHTMLElement createHTMLElement(String document) {
-		return new JSoupHTMLElement(Jsoup.parse(document));
+	public static JSoupHTMLElementWrapper createHTMLElement(String document) {
+		return new JSoupHTMLElementWrapper(Jsoup.parse(document));
 	}
 
 	@Override
@@ -37,11 +37,11 @@ public class JSoupHTMLElement implements HTMLElement {
 	}
 
 	@Override
-	public Collection<HTMLElement> select(String cssQuery) {
-		Collection<HTMLElement> results = new ArrayList<HTMLElement>();
+	public Collection<HTMLElementWrapper> select(String cssQuery) {
+		Collection<HTMLElementWrapper> results = new ArrayList<HTMLElementWrapper>();
 
 		for (Element element : this.element.select(cssQuery)) {
-			results.add(new JSoupHTMLElement(element));
+			results.add(new JSoupHTMLElementWrapper(element));
 		}
 
 		return results;
@@ -63,9 +63,9 @@ public class JSoupHTMLElement implements HTMLElement {
 	public Collection<String> getElementProperties(String cssQuery,
 			HTMLPropertyGrabber htmlPropertyGrabber) {
 		Collection<String> properties = new ArrayList<String>();
-		Collection<HTMLElement> htmlElements = select(cssQuery);
+		Collection<HTMLElementWrapper> htmlElements = select(cssQuery);
 
-		for (HTMLElement htmlElement : htmlElements) {
+		for (HTMLElementWrapper htmlElement : htmlElements) {
 			properties.add(htmlPropertyGrabber.getProperty(htmlElement));
 		}
 

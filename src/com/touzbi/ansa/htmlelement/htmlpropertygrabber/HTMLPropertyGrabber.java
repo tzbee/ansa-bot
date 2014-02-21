@@ -1,7 +1,7 @@
 package com.touzbi.ansa.htmlelement.htmlpropertygrabber;
 
-import com.touzbi.ansa.htmlelement.htmlelement.HTMLElement;
+import com.touzbi.ansa.htmlelement.htmlelement.HTMLElementWrapper;
 
 public interface HTMLPropertyGrabber {
-	String getProperty(HTMLElement htmlElement);
+	String getProperty(HTMLElementWrapper htmlElement);
 }

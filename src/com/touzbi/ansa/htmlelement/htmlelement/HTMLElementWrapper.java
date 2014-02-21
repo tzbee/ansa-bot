@@ -4,7 +4,7 @@ import java.util.Collection;
 
 import com.touzbi.ansa.htmlelement.htmlpropertygrabber.HTMLPropertyGrabber;
 
-public interface HTMLElement {
+public interface HTMLElementWrapper {
 	/**
 	 * @param attributeKey
 	 *            name of the attribute to get the value of
@@ -29,7 +29,7 @@ public interface HTMLElement {
 	 * @param cssQuery
 	 * @return The elements selected
 	 */
-	Collection<HTMLElement> select(String cssQuery);
+	Collection<HTMLElementWrapper> select(String cssQuery);
 
 	/**
 	 * @return
