@@ -35,7 +35,13 @@ public interface HTMLElementWrapper {
 	 * @return
 	 */
 
-	// TODO Javadoc
+	/**
+	 * Get an the attribute values of the elements selected by the query
+	 * 
+	 * @param cssQuery
+	 * @param attributeName
+	 * @return
+	 */
 	Collection<String> getAttributeValues(String cssQuery, String attributeName);
 
 	Collection<String> getInnerHTML(String cssQuery);

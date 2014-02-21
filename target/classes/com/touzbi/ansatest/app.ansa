@@ -1,4 +1,13 @@
-setinput(str:'haha');
-getcontent(link:'a');
+setinput(text:'<a href="hihihi"></a><a> href="hohoho"</a>');
+getcontent(query:'a');
 sysout;
+
+## format(prefix:'http://motherless.com/term/');
+
+## httprequest;
+
+## getcontent(link:'div.content-inner div.video a.img-container');
+
+## sysout;
+
 

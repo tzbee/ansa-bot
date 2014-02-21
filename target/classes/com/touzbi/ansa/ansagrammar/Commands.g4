@@ -6,6 +6,28 @@ commandId
 	| input
 	| httprequest
 	| getcontent
+	| format
+	| download
+;
+
+download
+:
+	DOWNLOAD
+;
+
+DOWNLOAD
+:
+	'download'
+;
+
+format
+:
+	FORMAT
+;
+
+FORMAT
+:
+	'format'
 ;
 
 getcontent

@@ -3,8 +3,8 @@ package com.touzbi.ansa.htmlelement.htmlelement;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
+import org.jsoup.parser.Parser;
 
 import com.touzbi.ansa.htmlelement.htmlpropertygrabber.AttributePropertyGrabber;
 import com.touzbi.ansa.htmlelement.htmlpropertygrabber.HTMLPropertyGrabber;
@@ -18,7 +18,8 @@ public class JSoupHTMLElementWrapper implements HTMLElementWrapper {
 	}
 
 	public static JSoupHTMLElementWrapper createHTMLElement(String document) {
-		return new JSoupHTMLElementWrapper(Jsoup.parse(document));
+		return new JSoupHTMLElementWrapper(Parser.xmlParser().parseInput(
+				document, ""));
 	}
 
 	@Override

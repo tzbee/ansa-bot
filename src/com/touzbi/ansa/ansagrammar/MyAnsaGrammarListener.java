@@ -15,7 +15,7 @@ import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.SysoutContext;
 import com.touzbi.ansa.command.ChromeDownloadCommand;
 import com.touzbi.ansa.command.Command;
 import com.touzbi.ansa.command.FormatStringCommand;
-import com.touzbi.ansa.command.HTMLQueryCommand;
+import com.touzbi.ansa.command.GetInnerHTMLCommand;
 import com.touzbi.ansa.command.HTTPRequestCommand;
 import com.touzbi.ansa.command.SetInputCommand;
 import com.touzbi.ansa.command.SysoutCommand;
@@ -64,7 +64,7 @@ public class MyAnsaGrammarListener extends AnsaGrammarBaseListener {
 
 	@Override
 	public void exitGetcontent(GetcontentContext ctx) {
-		this.currentCommand = new HTMLQueryCommand();
+		this.currentCommand = new GetInnerHTMLCommand();
 	}
 
 	@Override

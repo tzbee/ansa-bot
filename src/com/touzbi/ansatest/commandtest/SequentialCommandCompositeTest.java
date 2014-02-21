@@ -6,7 +6,7 @@ import java.util.Collection;
 import org.junit.Test;
 
 import com.touzbi.ansa.command.Command;
-import com.touzbi.ansa.command.HTMLQueryCommand;
+import com.touzbi.ansa.command.GetInnerHTMLCommand;
 import com.touzbi.ansa.command.SequentialCommandComposite;
 
 public class SequentialCommandCompositeTest {
@@ -17,7 +17,7 @@ public class SequentialCommandCompositeTest {
 	public void test() {
 		SequentialCommandComposite sequentialCommandComposite = new SequentialCommandComposite();
 
-		Command command1 = new HTMLQueryCommand();
+		Command command1 = new GetInnerHTMLCommand();
 		command1.addParams("link", "a");
 
 		sequentialCommandComposite.addCommand(command1);

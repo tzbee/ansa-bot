@@ -3,7 +3,7 @@ package com.touzbi.ansatest.commandtest;
 import org.junit.Test;
 
 import com.touzbi.ansa.command.Command;
-import com.touzbi.ansa.command.HTMLQueryCommand;
+import com.touzbi.ansa.command.GetInnerHTMLCommand;
 
 public class GetContentCommandTest {
 	private static final String INPUT = "<html><head></head><body><a href=\"test\"></a></body></html>";
@@ -11,7 +11,7 @@ public class GetContentCommandTest {
 
 	@Test
 	public void test() {
-		Command command = new HTMLQueryCommand();
+		Command command = new GetInnerHTMLCommand();
 
 		command.addParams(PARAM_NAME, "a[href=test]");
 		command.addInput(INPUT);

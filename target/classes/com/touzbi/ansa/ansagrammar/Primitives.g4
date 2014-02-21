@@ -8,10 +8,10 @@ QUOTED_STRING
 fragment
 STRING
 :
-	~[\n\r]+
+	~[\n\r]+?
 ;
 
-SINGLE_QUOTE 
+SINGLE_QUOTE
 :
 	'\''
 ;
@@ -19,7 +19,7 @@ SINGLE_QUOTE
 fragment
 LETTER
 :
-	[a-zA-Z]
+	[a-zA-Z-]
 ;
 
 WS
