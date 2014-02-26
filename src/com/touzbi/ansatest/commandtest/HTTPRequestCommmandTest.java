@@ -5,7 +5,7 @@ import org.junit.Test;
 import com.touzbi.ansa.command.Command;
 import com.touzbi.ansa.command.HTTPRequestCommand;
 
-public class HTTPRequestAnsaCommmandTest {
+public class HTTPRequestCommmandTest {
 	@Test
 	public void test() {
 		Command command = new HTTPRequestCommand();

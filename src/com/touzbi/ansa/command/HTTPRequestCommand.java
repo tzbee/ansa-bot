@@ -1,24 +1,11 @@
 package com.touzbi.ansa.command;
 
-import com.touzbi.ansa.requesthandlerstrategy.BasicRequestStrategy;
-import com.touzbi.ansa.requesthandlerstrategy.RequestStrategy;
+import com.touzbi.ansa.command.commandstrategy.BasicRequestCommand;
 
 public class HTTPRequestCommand extends AbstractCommand {
-	private RequestStrategy requestStrategy;
-
-	public HTTPRequestCommand(RequestStrategy requestHandler) {
-		this.requestStrategy = requestHandler;
-	}
 
 	public HTTPRequestCommand() {
-		this(new BasicRequestStrategy());
-	}
-
-	@Override
-	public void execute() {
-		for (String url : getInput()) {
-			addOutput(this.requestStrategy.getPage(url));
-		}
+		super(new BasicRequestCommand());
 	}
 
 	@Override

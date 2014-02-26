@@ -5,8 +5,14 @@ import java.util.Collection;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
+import com.touzbi.ansa.command.commandstrategy.CommandStrategy;
 
 public abstract class AbstractCommand implements Command {
+	private CommandStrategy commandStrategy;
+
+	public AbstractCommand(CommandStrategy commandStrategy) {
+		this.commandStrategy = commandStrategy;
+	}
 
 	// Default params
 	private static final String INPUT_PARAM = "input";
@@ -57,6 +63,11 @@ public abstract class AbstractCommand implements Command {
 	@Override
 	public Collection<String> getInput() {
 		return getParamValues(INPUT_PARAM);
+	}
+
+	@Override
+	public void execute() {
+		addOutput(this.commandStrategy.execute(getInput()));
 	}
 
 	@Override
