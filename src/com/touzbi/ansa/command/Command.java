@@ -2,6 +2,8 @@ package com.touzbi.ansa.command;
 
 import java.util.Collection;
 
+import com.touzbi.ansa.command.commandstrategy.CommandStrategy;
+
 public interface Command {
 
 	/**
@@ -46,4 +48,6 @@ public interface Command {
 	 * Execute the command
 	 */
 	void execute();
+
+	void setCommandStrategy(CommandStrategy commandStrategy);
 }

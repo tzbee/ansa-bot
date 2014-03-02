@@ -8,17 +8,20 @@ import com.google.common.collect.Multimap;
 import com.touzbi.ansa.command.commandstrategy.CommandStrategy;
 
 public abstract class AbstractCommand implements Command {
-	private CommandStrategy commandStrategy;
-
-	public AbstractCommand(CommandStrategy commandStrategy) {
-		this.commandStrategy = commandStrategy;
-	}
+	private CommandStrategy commandStrategy = null;
 
 	// Default params
 	private static final String INPUT_PARAM = "input";
 	private static final String OUTPUT_PARAM = "output";
 
 	private Multimap<String, String> namedParams = ArrayListMultimap.create();
+
+	public AbstractCommand(CommandStrategy commandStrategy) {
+		this.commandStrategy = commandStrategy;
+	}
+
+	public AbstractCommand() {
+	}
 
 	@Override
 	public void addParams(String paramName, Collection<String> paramValues) {
@@ -68,6 +71,11 @@ public abstract class AbstractCommand implements Command {
 	@Override
 	public void execute() {
 		addOutput(this.commandStrategy.execute(getInput()));
+	}
+
+	@Override
+	public void setCommandStrategy(CommandStrategy commandStrategy) {
+		this.commandStrategy = commandStrategy;
 	}
 
 	@Override

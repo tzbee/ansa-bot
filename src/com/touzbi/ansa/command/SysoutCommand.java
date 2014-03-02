@@ -1,12 +1,9 @@
 package com.touzbi.ansa.command;
 
-public class SysoutCommand extends PrintCommand {
-	public SysoutCommand() {
-		super(System.out);
-	}
+import com.touzbi.ansa.command.commandstrategy.SysoutCommandStrategy;
 
-	@Override
-	public String toString() {
-		return "Sysout command - " + super.toString();
+public class SysoutCommand extends AbstractCommand {
+	public SysoutCommand() {
+		super(new SysoutCommandStrategy());
 	}
 }
