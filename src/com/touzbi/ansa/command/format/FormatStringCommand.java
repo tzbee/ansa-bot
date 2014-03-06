@@ -1,8 +1,9 @@
-package com.touzbi.ansa.command;
+package com.touzbi.ansa.command.format;
 
 import java.util.Arrays;
 import java.util.Collection;
 
+import com.touzbi.ansa.command.AbstractCommandBuilder;
 import com.touzbi.ansa.util.stringformatter.CustomWrapperStringFormatter;
 
 public class FormatStringCommand extends AbstractCommandBuilder {
