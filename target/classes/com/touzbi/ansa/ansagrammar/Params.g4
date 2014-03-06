@@ -17,21 +17,12 @@ paramList
 
 paramPair
 :
-	paramName PARAM_DELIMITER paramValues
+	paramName PARAM_DELIMITER paramValue
 ;
 
 paramName
 :
 	PARAM_ID
-;
-
-paramValues
-:
-	paramValue
-	| '[' paramValue
-	(
-		',' paramValue
-	)* ']'
 ;
 
 paramValue

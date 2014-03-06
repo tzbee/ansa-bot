@@ -10,52 +10,20 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface CommandsListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link CommandsParser#input}.
+	 * Enter a parse tree produced by {@link CommandsParser#gethtmlelement}.
 	 * 
 	 * @param ctx
 	 *            the parse tree
 	 */
-	void enterInput(@NotNull CommandsParser.InputContext ctx);
+	void enterGethtmlelement(@NotNull CommandsParser.GethtmlelementContext ctx);
 
 	/**
-	 * Exit a parse tree produced by {@link CommandsParser#input}.
+	 * Exit a parse tree produced by {@link CommandsParser#gethtmlelement}.
 	 * 
 	 * @param ctx
 	 *            the parse tree
 	 */
-	void exitInput(@NotNull CommandsParser.InputContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link CommandsParser#download}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void enterDownload(@NotNull CommandsParser.DownloadContext ctx);
-
-	/**
-	 * Exit a parse tree produced by {@link CommandsParser#download}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void exitDownload(@NotNull CommandsParser.DownloadContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link CommandsParser#format}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void enterFormat(@NotNull CommandsParser.FormatContext ctx);
-
-	/**
-	 * Exit a parse tree produced by {@link CommandsParser#format}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void exitFormat(@NotNull CommandsParser.FormatContext ctx);
+	void exitGethtmlelement(@NotNull CommandsParser.GethtmlelementContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link CommandsParser#commandId}.
@@ -74,22 +42,6 @@ public interface CommandsListener extends ParseTreeListener {
 	void exitCommandId(@NotNull CommandsParser.CommandIdContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link CommandsParser#httprequest}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void enterHttprequest(@NotNull CommandsParser.HttprequestContext ctx);
-
-	/**
-	 * Exit a parse tree produced by {@link CommandsParser#httprequest}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void exitHttprequest(@NotNull CommandsParser.HttprequestContext ctx);
-
-	/**
 	 * Enter a parse tree produced by {@link CommandsParser#sysout}.
 	 * 
 	 * @param ctx
@@ -104,20 +56,4 @@ public interface CommandsListener extends ParseTreeListener {
 	 *            the parse tree
 	 */
 	void exitSysout(@NotNull CommandsParser.SysoutContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link CommandsParser#getcontent}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void enterGetcontent(@NotNull CommandsParser.GetcontentContext ctx);
-
-	/**
-	 * Exit a parse tree produced by {@link CommandsParser#getcontent}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void exitGetcontent(@NotNull CommandsParser.GetcontentContext ctx);
 }

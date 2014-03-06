@@ -1,28 +1,19 @@
 package com.touzbi.ansa.command;
 
+import java.util.Arrays;
 import java.util.Collection;
 
-import com.google.common.base.Joiner;
 import com.touzbi.ansa.util.stringformatter.CustomWrapperStringFormatter;
-import com.touzbi.ansa.util.stringformatter.StringFormatter;
 
-public class FormatStringCommand extends AbstractCommand {
+public class FormatStringCommand extends AbstractCommandBuilder {
+	private static final String PREFIX_PARAM = "prefix";
+	private static final String SUFFIX_PARAM = "suffix";
 
 	@Override
-	public void execute() {
-		Collection<String> prefix = getParamValues("prefix");
-		Collection<String> suffix = getParamValues("suffix");
-
-		// TODO Refactor JoinFormatter
-		String fullPrefix = Joiner.on("").join(prefix);
-		String fullSuffix = Joiner.on("").join(suffix);
-
-		StringFormatter formatter = new CustomWrapperStringFormatter(
-				fullPrefix, fullSuffix);
-
-		for (String input : getInput()) {
-			addOutput(formatter.format(input));
-		}
+	public Collection<String> execute(String input) {
+		return Arrays.asList(new CustomWrapperStringFormatter(
+				getParamValue(PREFIX_PARAM), getParamValue(SUFFIX_PARAM))
+				.format(input));
 	}
 
 	@Override

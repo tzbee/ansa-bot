@@ -10,6 +10,22 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface AnsaGrammarListener extends ParseTreeListener {
 	/**
+	 * Enter a parse tree produced by {@link AnsaGrammarParser#commandBlock}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void enterCommandBlock(@NotNull AnsaGrammarParser.CommandBlockContext ctx);
+
+	/**
+	 * Exit a parse tree produced by {@link AnsaGrammarParser#commandBlock}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void exitCommandBlock(@NotNull AnsaGrammarParser.CommandBlockContext ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link AnsaGrammarParser#paramList}.
 	 * 
 	 * @param ctx
@@ -24,6 +40,23 @@ public interface AnsaGrammarListener extends ParseTreeListener {
 	 *            the parse tree
 	 */
 	void exitParamList(@NotNull AnsaGrammarParser.ParamListContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link AnsaGrammarParser#gethtmlelement}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void enterGethtmlelement(
+			@NotNull AnsaGrammarParser.GethtmlelementContext ctx);
+
+	/**
+	 * Exit a parse tree produced by {@link AnsaGrammarParser#gethtmlelement}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void exitGethtmlelement(@NotNull AnsaGrammarParser.GethtmlelementContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link AnsaGrammarParser#init}.
@@ -42,22 +75,6 @@ public interface AnsaGrammarListener extends ParseTreeListener {
 	void exitInit(@NotNull AnsaGrammarParser.InitContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link AnsaGrammarParser#download}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void enterDownload(@NotNull AnsaGrammarParser.DownloadContext ctx);
-
-	/**
-	 * Exit a parse tree produced by {@link AnsaGrammarParser#download}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void exitDownload(@NotNull AnsaGrammarParser.DownloadContext ctx);
-
-	/**
 	 * Enter a parse tree produced by {@link AnsaGrammarParser#commandId}.
 	 * 
 	 * @param ctx
@@ -74,22 +91,6 @@ public interface AnsaGrammarListener extends ParseTreeListener {
 	void exitCommandId(@NotNull AnsaGrammarParser.CommandIdContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link AnsaGrammarParser#format}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void enterFormat(@NotNull AnsaGrammarParser.FormatContext ctx);
-
-	/**
-	 * Exit a parse tree produced by {@link AnsaGrammarParser#format}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void exitFormat(@NotNull AnsaGrammarParser.FormatContext ctx);
-
-	/**
 	 * Enter a parse tree produced by {@link AnsaGrammarParser#paramValue}.
 	 * 
 	 * @param ctx
@@ -104,102 +105,6 @@ public interface AnsaGrammarListener extends ParseTreeListener {
 	 *            the parse tree
 	 */
 	void exitParamValue(@NotNull AnsaGrammarParser.ParamValueContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link AnsaGrammarParser#paramValues}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void enterParamValues(@NotNull AnsaGrammarParser.ParamValuesContext ctx);
-
-	/**
-	 * Exit a parse tree produced by {@link AnsaGrammarParser#paramValues}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void exitParamValues(@NotNull AnsaGrammarParser.ParamValuesContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link AnsaGrammarParser#getcontent}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void enterGetcontent(@NotNull AnsaGrammarParser.GetcontentContext ctx);
-
-	/**
-	 * Exit a parse tree produced by {@link AnsaGrammarParser#getcontent}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void exitGetcontent(@NotNull AnsaGrammarParser.GetcontentContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link AnsaGrammarParser#sysout}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void enterSysout(@NotNull AnsaGrammarParser.SysoutContext ctx);
-
-	/**
-	 * Exit a parse tree produced by {@link AnsaGrammarParser#sysout}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void exitSysout(@NotNull AnsaGrammarParser.SysoutContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link AnsaGrammarParser#paramBlock}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void enterParamBlock(@NotNull AnsaGrammarParser.ParamBlockContext ctx);
-
-	/**
-	 * Exit a parse tree produced by {@link AnsaGrammarParser#paramBlock}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void exitParamBlock(@NotNull AnsaGrammarParser.ParamBlockContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link AnsaGrammarParser#input}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void enterInput(@NotNull AnsaGrammarParser.InputContext ctx);
-
-	/**
-	 * Exit a parse tree produced by {@link AnsaGrammarParser#input}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void exitInput(@NotNull AnsaGrammarParser.InputContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link AnsaGrammarParser#commandBlock}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void enterCommandBlock(@NotNull AnsaGrammarParser.CommandBlockContext ctx);
-
-	/**
-	 * Exit a parse tree produced by {@link AnsaGrammarParser#commandBlock}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void exitCommandBlock(@NotNull AnsaGrammarParser.CommandBlockContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link AnsaGrammarParser#paramPair}.
@@ -234,18 +139,34 @@ public interface AnsaGrammarListener extends ParseTreeListener {
 	void exitParamName(@NotNull AnsaGrammarParser.ParamNameContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link AnsaGrammarParser#httprequest}.
+	 * Enter a parse tree produced by {@link AnsaGrammarParser#paramBlock}.
 	 * 
 	 * @param ctx
 	 *            the parse tree
 	 */
-	void enterHttprequest(@NotNull AnsaGrammarParser.HttprequestContext ctx);
+	void enterParamBlock(@NotNull AnsaGrammarParser.ParamBlockContext ctx);
 
 	/**
-	 * Exit a parse tree produced by {@link AnsaGrammarParser#httprequest}.
+	 * Exit a parse tree produced by {@link AnsaGrammarParser#paramBlock}.
 	 * 
 	 * @param ctx
 	 *            the parse tree
 	 */
-	void exitHttprequest(@NotNull AnsaGrammarParser.HttprequestContext ctx);
+	void exitParamBlock(@NotNull AnsaGrammarParser.ParamBlockContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link AnsaGrammarParser#sysout}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void enterSysout(@NotNull AnsaGrammarParser.SysoutContext ctx);
+
+	/**
+	 * Exit a parse tree produced by {@link AnsaGrammarParser#sysout}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void exitSysout(@NotNull AnsaGrammarParser.SysoutContext ctx);
 }

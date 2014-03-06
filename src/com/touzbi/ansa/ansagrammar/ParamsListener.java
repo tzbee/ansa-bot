@@ -74,22 +74,6 @@ public interface ParamsListener extends ParseTreeListener {
 	void exitParamName(@NotNull ParamsParser.ParamNameContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link ParamsParser#paramValues}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void enterParamValues(@NotNull ParamsParser.ParamValuesContext ctx);
-
-	/**
-	 * Exit a parse tree produced by {@link ParamsParser#paramValues}.
-	 * 
-	 * @param ctx
-	 *            the parse tree
-	 */
-	void exitParamValues(@NotNull ParamsParser.ParamValuesContext ctx);
-
-	/**
 	 * Enter a parse tree produced by {@link ParamsParser#paramBlock}.
 	 * 
 	 * @param ctx

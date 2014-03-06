@@ -1,19 +1,24 @@
-package com.touzbi.ansa.input.inputfactory;
+package com.touzbi.ansa.inputfactory;
 
 import java.util.Collection;
 
 import com.touzbi.ansa.util.separator.ScannerSeparator;
 import com.touzbi.ansa.util.separator.Separator;
 
-public class FileInputFactory extends AbstractFileInputFactory {
+/**
+ * Reads inputs from a file, separated by a new line
+ * 
+ * @author touzbi
+ */
+public class BasicFileInputFactory extends AbstractFileInputFactory {
 	private Separator separator = new ScannerSeparator("\n");
 
-	public FileInputFactory(String inputFilePath, boolean relativeToJar) {
+	public BasicFileInputFactory(String inputFilePath, boolean relativeToJar) {
 		super(inputFilePath, relativeToJar);
 	}
 
 	@Override
-	public Collection<String> getInput() {
+	public Collection<String> getInputs() {
 		return this.separator.separate(this.fileContentWrapper
 				.getFileContent(this.inputFilePath));
 	}

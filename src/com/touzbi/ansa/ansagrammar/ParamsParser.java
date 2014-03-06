@@ -3,7 +3,6 @@ package com.touzbi.ansa.ansagrammar;
 
 import java.util.List;
 
-import org.antlr.v4.runtime.NoViableAltException;
 import org.antlr.v4.runtime.Parser;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.RecognitionException;
@@ -20,17 +19,14 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 public class ParamsParser extends Parser {
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache = new PredictionContextCache();
-	public static final int T__4 = 1, T__3 = 2, T__2 = 3, T__1 = 4, T__0 = 5,
-			PARAM_ID = 6, PARAM_DELIMITER = 7, QUOTED_STRING = 8,
-			SINGLE_QUOTE = 9, WS = 10;
-	public static final String[] tokenNames = { "<INVALID>", "']'", "')'",
-			"','", "'['", "'('", "PARAM_ID", "':'", "QUOTED_STRING", "'''",
-			"WS" };
+	public static final int T__2 = 1, T__1 = 2, T__0 = 3, PARAM_ID = 4,
+			PARAM_DELIMITER = 5, QUOTED_STRING = 6, SINGLE_QUOTE = 7, WS = 8;
+	public static final String[] tokenNames = { "<INVALID>", "')'", "','",
+			"'('", "PARAM_ID", "':'", "QUOTED_STRING", "'''", "WS" };
 	public static final int RULE_paramBlock = 0, RULE_paramList = 1,
-			RULE_paramPair = 2, RULE_paramName = 3, RULE_paramValues = 4,
-			RULE_paramValue = 5;
+			RULE_paramPair = 2, RULE_paramName = 3, RULE_paramValue = 4;
 	public static final String[] ruleNames = { "paramBlock", "paramList",
-			"paramPair", "paramName", "paramValues", "paramValue" };
+			"paramPair", "paramName", "paramValue" };
 
 	@Override
 	public String getGrammarFileName() {
@@ -91,12 +87,12 @@ public class ParamsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(12);
-				match(5);
-				setState(13);
+				setState(10);
+				match(3);
+				setState(11);
 				paramList();
-				setState(14);
-				match(2);
+				setState(12);
+				match(1);
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -146,21 +142,21 @@ public class ParamsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(16);
+				setState(14);
 				paramPair();
-				setState(21);
+				setState(19);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la == 3) {
+				while (_la == 2) {
 					{
 						{
-							setState(17);
-							match(3);
-							setState(18);
+							setState(15);
+							match(2);
+							setState(16);
 							paramPair();
 						}
 					}
-					setState(23);
+					setState(21);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
@@ -184,8 +180,8 @@ public class ParamsParser extends Parser {
 			return getToken(ParamsParser.PARAM_DELIMITER, 0);
 		}
 
-		public ParamValuesContext paramValues() {
-			return getRuleContext(ParamValuesContext.class, 0);
+		public ParamValueContext paramValue() {
+			return getRuleContext(ParamValueContext.class, 0);
 		}
 
 		public ParamPairContext(ParserRuleContext parent, int invokingState) {
@@ -216,12 +212,12 @@ public class ParamsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(24);
+				setState(22);
 				paramName();
-				setState(25);
+				setState(23);
 				match(PARAM_DELIMITER);
-				setState(26);
-				paramValues();
+				setState(24);
+				paramValue();
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -266,93 +262,8 @@ public class ParamsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(28);
+				setState(26);
 				match(PARAM_ID);
-			}
-		} catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		} finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class ParamValuesContext extends ParserRuleContext {
-		public ParamValueContext paramValue(int i) {
-			return getRuleContext(ParamValueContext.class, i);
-		}
-
-		public List<ParamValueContext> paramValue() {
-			return getRuleContexts(ParamValueContext.class);
-		}
-
-		public ParamValuesContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-
-		@Override
-		public int getRuleIndex() {
-			return RULE_paramValues;
-		}
-
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if (listener instanceof ParamsListener)
-				((ParamsListener) listener).enterParamValues(this);
-		}
-
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if (listener instanceof ParamsListener)
-				((ParamsListener) listener).exitParamValues(this);
-		}
-	}
-
-	public final ParamValuesContext paramValues() throws RecognitionException {
-		ParamValuesContext _localctx = new ParamValuesContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_paramValues);
-		int _la;
-		try {
-			setState(42);
-			switch (_input.LA(1)) {
-			case QUOTED_STRING:
-				enterOuterAlt(_localctx, 1);
-				{
-					setState(30);
-					paramValue();
-				}
-				break;
-			case 4:
-				enterOuterAlt(_localctx, 2);
-				{
-					setState(31);
-					match(4);
-					setState(32);
-					paramValue();
-					setState(37);
-					_errHandler.sync(this);
-					_la = _input.LA(1);
-					while (_la == 3) {
-						{
-							{
-								setState(33);
-								match(3);
-								setState(34);
-								paramValue();
-							}
-						}
-						setState(39);
-						_errHandler.sync(this);
-						_la = _input.LA(1);
-					}
-					setState(40);
-					match(1);
-				}
-				break;
-			default:
-				throw new NoViableAltException(this);
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -393,11 +304,11 @@ public class ParamsParser extends Parser {
 
 	public final ParamValueContext paramValue() throws RecognitionException {
 		ParamValueContext _localctx = new ParamValueContext(_ctx, getState());
-		enterRule(_localctx, 10, RULE_paramValue);
+		enterRule(_localctx, 8, RULE_paramValue);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(44);
+				setState(28);
 				match(QUOTED_STRING);
 			}
 		} catch (RecognitionException re) {
@@ -410,18 +321,15 @@ public class ParamsParser extends Parser {
 		return _localctx;
 	}
 
-	public static final String _serializedATN = "\3\uacf5\uee8c\u4f5d\u8b0d\u4a45\u78bd\u1b2f\u3378\3\f\61\4\2\t\2\4\3"
-			+ "\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\3\2\3\2\3\2\3\2\3\3\3\3\3\3\7\3\26"
-			+ "\n\3\f\3\16\3\31\13\3\3\4\3\4\3\4\3\4\3\5\3\5\3\6\3\6\3\6\3\6\3\6\7\6"
-			+ "&\n\6\f\6\16\6)\13\6\3\6\3\6\5\6-\n\6\3\7\3\7\3\7\2\b\2\4\6\b\n\f\2\2"
-			+ "-\2\16\3\2\2\2\4\22\3\2\2\2\6\32\3\2\2\2\b\36\3\2\2\2\n,\3\2\2\2\f.\3"
-			+ "\2\2\2\16\17\7\7\2\2\17\20\5\4\3\2\20\21\7\4\2\2\21\3\3\2\2\2\22\27\5"
-			+ "\6\4\2\23\24\7\5\2\2\24\26\5\6\4\2\25\23\3\2\2\2\26\31\3\2\2\2\27\25\3"
-			+ "\2\2\2\27\30\3\2\2\2\30\5\3\2\2\2\31\27\3\2\2\2\32\33\5\b\5\2\33\34\7"
-			+ "\t\2\2\34\35\5\n\6\2\35\7\3\2\2\2\36\37\7\b\2\2\37\t\3\2\2\2 -\5\f\7\2"
-			+ "!\"\7\6\2\2\"\'\5\f\7\2#$\7\5\2\2$&\5\f\7\2%#\3\2\2\2&)\3\2\2\2\'%\3\2"
-			+ "\2\2\'(\3\2\2\2(*\3\2\2\2)\'\3\2\2\2*+\7\3\2\2+-\3\2\2\2, \3\2\2\2,!\3"
-			+ "\2\2\2-\13\3\2\2\2./\7\n\2\2/\r\3\2\2\2\5\27\',";
+	public static final String _serializedATN = "\3\uacf5\uee8c\u4f5d\u8b0d\u4a45\u78bd\u1b2f\u3378\3\n!\4\2\t\2\4\3\t"
+			+ "\3\4\4\t\4\4\5\t\5\4\6\t\6\3\2\3\2\3\2\3\2\3\3\3\3\3\3\7\3\24\n\3\f\3"
+			+ "\16\3\27\13\3\3\4\3\4\3\4\3\4\3\5\3\5\3\6\3\6\3\6\2\7\2\4\6\b\n\2\2\34"
+			+ "\2\f\3\2\2\2\4\20\3\2\2\2\6\30\3\2\2\2\b\34\3\2\2\2\n\36\3\2\2\2\f\r\7"
+			+ "\5\2\2\r\16\5\4\3\2\16\17\7\3\2\2\17\3\3\2\2\2\20\25\5\6\4\2\21\22\7\4"
+			+ "\2\2\22\24\5\6\4\2\23\21\3\2\2\2\24\27\3\2\2\2\25\23\3\2\2\2\25\26\3\2"
+			+ "\2\2\26\5\3\2\2\2\27\25\3\2\2\2\30\31\5\b\5\2\31\32\7\7\2\2\32\33\5\n"
+			+ "\6\2\33\7\3\2\2\2\34\35\7\6\2\2\35\t\3\2\2\2\36\37\7\b\2\2\37\13\3\2\2"
+			+ "\2\3\25";
 	public static final ATN _ATN = ATNSimulator.deserialize(_serializedATN
 			.toCharArray());
 	static {

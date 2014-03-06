@@ -1,12 +1,4 @@
-INPUT=6
-FORMAT=2
-SYSOUT=5
-HTTP_REQUEST=4
-DOWNLOAD=1
-GET_CONTENT=3
-'setinput'=6
-'getcontent'=3
-'httprequest'=4
-'download'=1
-'sysout'=5
-'format'=2
+GET_HTML_ELEMENT=1
+SYSOUT=2
+'gethtmlelement'=1
+'sysout'=2

@@ -18,7 +18,8 @@ public class CommandsBaseListener implements CommandsListener {
 	 * The default implementation does nothing.
 	 */
 	@Override
-	public void enterInput(@NotNull CommandsParser.InputContext ctx) {
+	public void enterGethtmlelement(
+			@NotNull CommandsParser.GethtmlelementContext ctx) {
 	}
 
 	/**
@@ -27,43 +28,8 @@ public class CommandsBaseListener implements CommandsListener {
 	 * The default implementation does nothing.
 	 */
 	@Override
-	public void exitInput(@NotNull CommandsParser.InputContext ctx) {
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override
-	public void enterDownload(@NotNull CommandsParser.DownloadContext ctx) {
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override
-	public void exitDownload(@NotNull CommandsParser.DownloadContext ctx) {
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override
-	public void enterFormat(@NotNull CommandsParser.FormatContext ctx) {
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override
-	public void exitFormat(@NotNull CommandsParser.FormatContext ctx) {
+	public void exitGethtmlelement(
+			@NotNull CommandsParser.GethtmlelementContext ctx) {
 	}
 
 	/**
@@ -90,24 +56,6 @@ public class CommandsBaseListener implements CommandsListener {
 	 * The default implementation does nothing.
 	 */
 	@Override
-	public void enterHttprequest(@NotNull CommandsParser.HttprequestContext ctx) {
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override
-	public void exitHttprequest(@NotNull CommandsParser.HttprequestContext ctx) {
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override
 	public void enterSysout(@NotNull CommandsParser.SysoutContext ctx) {
 	}
 
@@ -118,24 +66,6 @@ public class CommandsBaseListener implements CommandsListener {
 	 */
 	@Override
 	public void exitSysout(@NotNull CommandsParser.SysoutContext ctx) {
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override
-	public void enterGetcontent(@NotNull CommandsParser.GetcontentContext ctx) {
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override
-	public void exitGetcontent(@NotNull CommandsParser.GetcontentContext ctx) {
 	}
 
 	/**

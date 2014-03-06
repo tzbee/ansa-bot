@@ -1,4 +1,4 @@
-sysout(input:'test');
-
+gethtmlelement(query:'a');
+sysout;
 
 

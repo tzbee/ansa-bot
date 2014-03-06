@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.touzbi.ansa.ansagrammar.MyAnsaGrammarListener;
 import com.touzbi.ansa.antlr.parserwrapper.AnsaParserWrapper;
-import com.touzbi.ansa.command.commandbuilder.CommandBuilder;
+import com.touzbi.ansa.command.CommandBuilder;
 
 public class AnsaANTLRWrapper extends AbstractANTLRWrapper {
 	@SuppressWarnings("unused")

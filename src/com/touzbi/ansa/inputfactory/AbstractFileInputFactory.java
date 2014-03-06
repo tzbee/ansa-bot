@@ -1,4 +1,4 @@
-package com.touzbi.ansa.input.inputfactory;
+package com.touzbi.ansa.inputfactory;
 
 import com.touzbi.ansa.filecontentwrapper.BasicFileContentWrapper;
 import com.touzbi.ansa.filecontentwrapper.FileContentWrapper;

@@ -3,51 +3,17 @@ grammar Commands;
 commandId
 :
 	sysout
-	| input
-	| httprequest
-	| getcontent
-	| format
-	| download
+	| gethtmlelement
 ;
 
-download
+gethtmlelement
 :
-	DOWNLOAD
+	GET_HTML_ELEMENT
 ;
 
-DOWNLOAD
+GET_HTML_ELEMENT
 :
-	'download'
-;
-
-format
-:
-	FORMAT
-;
-
-FORMAT
-:
-	'format'
-;
-
-getcontent
-:
-	GET_CONTENT
-;
-
-GET_CONTENT
-:
-	'getcontent'
-;
-
-httprequest
-:
-	HTTP_REQUEST
-;
-
-HTTP_REQUEST
-:
-	'httprequest'
+	'gethtmlelement'
 ;
 
 sysout
@@ -60,17 +26,9 @@ SYSOUT
 	'sysout'
 ;
 
-input
-:
-	INPUT
-;
-
-INPUT
-:
-	'setinput'
-;
 
 
+ 
 
 
 
