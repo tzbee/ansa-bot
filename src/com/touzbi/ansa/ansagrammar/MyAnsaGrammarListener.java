@@ -1,11 +1,15 @@
 package com.touzbi.ansa.ansagrammar;
 
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.CommandBlockContext;
-import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.GethtmlelementContext;
+import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.DownloadContext;
+import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.GethtmlattributeContext;
+import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.HttprequestContext;
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.ParamPairContext;
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.SysoutContext;
 import com.touzbi.ansa.command.CommandBuilder;
-import com.touzbi.ansa.command.gethtmlelement.GetHTMLElementCommandBuilder;
+import com.touzbi.ansa.command.download.DownloadCommandBuilder;
+import com.touzbi.ansa.command.gethtmlelement.GetHTMLAttributeCommandBuilder;
+import com.touzbi.ansa.command.httprequest.HTTPRequestCommandBuilder;
 import com.touzbi.ansa.command.print.SysoutCommandBuilder;
 import com.touzbi.ansa.util.stringformatter.EdgeCutterStringFormatter;
 import com.touzbi.ansa.util.stringformatter.StringFormatter;
@@ -40,8 +44,18 @@ public class MyAnsaGrammarListener extends AnsaGrammarBaseListener {
 	}
 
 	@Override
-	public void exitGethtmlelement(GethtmlelementContext ctx) {
-		this.currentCommandBuilder = new GetHTMLElementCommandBuilder();
+	public void exitGethtmlattribute(GethtmlattributeContext ctx) {
+		this.currentCommandBuilder = new GetHTMLAttributeCommandBuilder();
+	}
+
+	@Override
+	public void exitHttprequest(HttprequestContext ctx) {
+		this.currentCommandBuilder = new HTTPRequestCommandBuilder();
+	}
+
+	@Override
+	public void exitDownload(DownloadContext ctx) {
+		this.currentCommandBuilder = new DownloadCommandBuilder();
 	}
 
 	/**

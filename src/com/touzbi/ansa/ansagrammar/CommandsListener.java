@@ -10,20 +10,38 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface CommandsListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link CommandsParser#gethtmlelement}.
+	 * Enter a parse tree produced by {@link CommandsParser#gethtmlattribute}.
 	 * 
 	 * @param ctx
 	 *            the parse tree
 	 */
-	void enterGethtmlelement(@NotNull CommandsParser.GethtmlelementContext ctx);
+	void enterGethtmlattribute(
+			@NotNull CommandsParser.GethtmlattributeContext ctx);
 
 	/**
-	 * Exit a parse tree produced by {@link CommandsParser#gethtmlelement}.
+	 * Exit a parse tree produced by {@link CommandsParser#gethtmlattribute}.
 	 * 
 	 * @param ctx
 	 *            the parse tree
 	 */
-	void exitGethtmlelement(@NotNull CommandsParser.GethtmlelementContext ctx);
+	void exitGethtmlattribute(
+			@NotNull CommandsParser.GethtmlattributeContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link CommandsParser#download}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void enterDownload(@NotNull CommandsParser.DownloadContext ctx);
+
+	/**
+	 * Exit a parse tree produced by {@link CommandsParser#download}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void exitDownload(@NotNull CommandsParser.DownloadContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link CommandsParser#commandId}.
@@ -40,6 +58,22 @@ public interface CommandsListener extends ParseTreeListener {
 	 *            the parse tree
 	 */
 	void exitCommandId(@NotNull CommandsParser.CommandIdContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link CommandsParser#httprequest}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void enterHttprequest(@NotNull CommandsParser.HttprequestContext ctx);
+
+	/**
+	 * Exit a parse tree produced by {@link CommandsParser#httprequest}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void exitHttprequest(@NotNull CommandsParser.HttprequestContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link CommandsParser#sysout}.

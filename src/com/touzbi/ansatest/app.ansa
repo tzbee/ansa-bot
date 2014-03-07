@@ -1,4 +1,4 @@
-gethtmlelement(query:'a');
+httprequest;
+gethtmlattribute(query:'a',attribute:'href');
 sysout;
-
 

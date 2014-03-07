@@ -18,8 +18,8 @@ public class CommandsBaseListener implements CommandsListener {
 	 * The default implementation does nothing.
 	 */
 	@Override
-	public void enterGethtmlelement(
-			@NotNull CommandsParser.GethtmlelementContext ctx) {
+	public void enterGethtmlattribute(
+			@NotNull CommandsParser.GethtmlattributeContext ctx) {
 	}
 
 	/**
@@ -28,8 +28,26 @@ public class CommandsBaseListener implements CommandsListener {
 	 * The default implementation does nothing.
 	 */
 	@Override
-	public void exitGethtmlelement(
-			@NotNull CommandsParser.GethtmlelementContext ctx) {
+	public void exitGethtmlattribute(
+			@NotNull CommandsParser.GethtmlattributeContext ctx) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override
+	public void enterDownload(@NotNull CommandsParser.DownloadContext ctx) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override
+	public void exitDownload(@NotNull CommandsParser.DownloadContext ctx) {
 	}
 
 	/**
@@ -48,6 +66,24 @@ public class CommandsBaseListener implements CommandsListener {
 	 */
 	@Override
 	public void exitCommandId(@NotNull CommandsParser.CommandIdContext ctx) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override
+	public void enterHttprequest(@NotNull CommandsParser.HttprequestContext ctx) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override
+	public void exitHttprequest(@NotNull CommandsParser.HttprequestContext ctx) {
 	}
 
 	/**

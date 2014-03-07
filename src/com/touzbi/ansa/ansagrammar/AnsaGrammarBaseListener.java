@@ -56,8 +56,8 @@ public class AnsaGrammarBaseListener implements AnsaGrammarListener {
 	 * The default implementation does nothing.
 	 */
 	@Override
-	public void enterGethtmlelement(
-			@NotNull AnsaGrammarParser.GethtmlelementContext ctx) {
+	public void enterGethtmlattribute(
+			@NotNull AnsaGrammarParser.GethtmlattributeContext ctx) {
 	}
 
 	/**
@@ -66,8 +66,8 @@ public class AnsaGrammarBaseListener implements AnsaGrammarListener {
 	 * The default implementation does nothing.
 	 */
 	@Override
-	public void exitGethtmlelement(
-			@NotNull AnsaGrammarParser.GethtmlelementContext ctx) {
+	public void exitGethtmlattribute(
+			@NotNull AnsaGrammarParser.GethtmlattributeContext ctx) {
 	}
 
 	/**
@@ -86,6 +86,24 @@ public class AnsaGrammarBaseListener implements AnsaGrammarListener {
 	 */
 	@Override
 	public void exitInit(@NotNull AnsaGrammarParser.InitContext ctx) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override
+	public void enterDownload(@NotNull AnsaGrammarParser.DownloadContext ctx) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override
+	public void exitDownload(@NotNull AnsaGrammarParser.DownloadContext ctx) {
 	}
 
 	/**
@@ -158,6 +176,26 @@ public class AnsaGrammarBaseListener implements AnsaGrammarListener {
 	 */
 	@Override
 	public void exitParamName(@NotNull AnsaGrammarParser.ParamNameContext ctx) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override
+	public void enterHttprequest(
+			@NotNull AnsaGrammarParser.HttprequestContext ctx) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override
+	public void exitHttprequest(
+			@NotNull AnsaGrammarParser.HttprequestContext ctx) {
 	}
 
 	/**

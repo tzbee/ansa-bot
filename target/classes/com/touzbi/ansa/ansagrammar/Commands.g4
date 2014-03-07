@@ -3,17 +3,39 @@ grammar Commands;
 commandId
 :
 	sysout
-	| gethtmlelement
+	| gethtmlattribute
+	| httprequest
+	| download
 ;
 
-gethtmlelement
+download
 :
-	GET_HTML_ELEMENT
+	DOWNLOAD
 ;
 
-GET_HTML_ELEMENT
+DOWNLOAD
 :
-	'gethtmlelement'
+	'download'
+;
+
+httprequest
+:
+	HTTP_REQUEST
+;
+
+HTTP_REQUEST
+:
+	'httprequest'
+;
+
+gethtmlattribute
+:
+	GET_HTML_ATTRIBUTE
+;
+
+GET_HTML_ATTRIBUTE
+:
+	'gethtmlattribute'
 ;
 
 sysout
