@@ -14,5 +14,6 @@ public class AnsaANTLRWrapper extends AbstractANTLRWrapper {
 	public AnsaANTLRWrapper(String input, CommandBuilder commandBuilder) {
 		super(new MyAnsaGrammarListener(commandBuilder), new AnsaParserWrapper(
 				input));
+		
 	}
 }
