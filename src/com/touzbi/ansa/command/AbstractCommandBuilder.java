@@ -19,7 +19,8 @@ public abstract class AbstractCommandBuilder implements CommandBuilder {
 
 	@Override
 	public String getParamValue(String paramName) {
-		return this.params.get(paramName);
+		return this.params.get(paramName) != null ? this.params.get(paramName)
+				: "";
 	}
 
 	@Override

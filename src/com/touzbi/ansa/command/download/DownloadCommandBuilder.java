@@ -10,6 +10,7 @@ import com.touzbi.ansa.launcher.Launcher;
 public class DownloadCommandBuilder extends AbstractCommandBuilder {
 	private static final String BASE_COMMAND_PARAM = "command";
 
+	// Launcher strategy to use
 	private Launcher launcher = new BasicLauncher();
 
 	@Override
