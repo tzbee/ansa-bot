@@ -5,7 +5,7 @@ import com.touzbi.ansa.commandstorage.CommandStorage;
 import com.touzbi.ansa.inputfactory.BasicFileInputFactory;
 
 public class AnsaMain {
-	private static final String INPUT_CONFIG_FILE = "com/touzbi/ansatest/input.cfg";
+	private static final String INPUT_CONFIG_FILE = "input.cfg";
 
 	public static void main(String[] args) {
 		CommandStorage commandStorage = AnsaCommandStorage.getInstance();
