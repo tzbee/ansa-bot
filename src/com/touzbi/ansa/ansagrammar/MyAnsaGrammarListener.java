@@ -2,6 +2,7 @@ package com.touzbi.ansa.ansagrammar;
 
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.CommandBlockContext;
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.DownloadContext;
+import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.FormatContext;
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.GetcontentbyregexContext;
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.GethtmlattributeContext;
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.GethtmltextContext;
@@ -10,6 +11,7 @@ import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.ParamPairContext;
 import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.SysoutContext;
 import com.touzbi.ansa.command.CommandBuilder;
 import com.touzbi.ansa.command.download.DownloadCommandBuilder;
+import com.touzbi.ansa.command.format.FormatStringCommand;
 import com.touzbi.ansa.command.getcontent.GetContentByRegexQuery;
 import com.touzbi.ansa.command.gethtmlelement.GetHTMLAttributeCommandBuilder;
 import com.touzbi.ansa.command.gethtmlelement.GetHTMLElementTextContent;
@@ -70,6 +72,11 @@ public class MyAnsaGrammarListener extends AnsaGrammarBaseListener {
 	@Override
 	public void exitGetcontentbyregex(GetcontentbyregexContext ctx) {
 		this.currentCommandBuilder = new GetContentByRegexQuery();
+	}
+
+	@Override
+	public void exitFormat(FormatContext ctx) {
+		this.currentCommandBuilder = new FormatStringCommand();
 	}
 
 	/**

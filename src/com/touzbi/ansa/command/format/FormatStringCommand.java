@@ -19,6 +19,6 @@ public class FormatStringCommand extends AbstractCommandBuilder {
 
 	@Override
 	public String toString() {
-		return "Format String command - " + super.toString();
+		return "Format string";
 	}
 }

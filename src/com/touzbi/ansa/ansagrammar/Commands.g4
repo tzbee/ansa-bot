@@ -8,6 +8,17 @@ commandId
 	| getcontentbyregex
 	| httprequest
 	| download
+	| format
+;
+
+format
+:
+	FORMAT
+;
+
+FORMAT
+:
+	'format'
 ;
 
 getcontentbyregex
