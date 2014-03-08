@@ -11,4 +11,9 @@ public class GetHTMLAttributeCommandBuilder extends
 		return htmlElementWrapper
 				.getAttributeValue(getParamValue(ATTRIBUTE_PARAM));
 	}
+
+	@Override
+	public String toString() {
+		return "Get HTML Attribute" + getParamValue(ATTRIBUTE_PARAM);
+	}
 }

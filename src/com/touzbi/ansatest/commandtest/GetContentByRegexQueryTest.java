@@ -11,6 +11,7 @@ public class GetContentByRegexQueryTest {
 	public void test() {
 		CommandBuilder commandBuilder = new GetContentByRegexQuery();
 		commandBuilder.addParam("query", "ae.*k");
-		System.out.println(commandBuilder.execute("zfzefzefzefeazfaefezfzkzdazdzd"));
+		System.out.println(commandBuilder
+				.execute("zfzefzefzefeazfaefezfzkzdazdzd"));
 	}
 }

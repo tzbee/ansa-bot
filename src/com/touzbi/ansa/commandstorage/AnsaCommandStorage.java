@@ -25,12 +25,14 @@ public class AnsaCommandStorage implements CommandStorage {
 
 	@Override
 	public CommandBuilder getCommandByName(String commandName) {
-		try {
-			return this.commands.get(commandName);
-		} catch (NullPointerException e) {
+		LOGGER.info("Getting command {}", commandName);
+
+		if (this.commands.get(commandName) == null) {
+			LOGGER.info("Command {} not found", commandName);
 			loadCommand(commandName);
-			return this.commands.get(commandName);
 		}
+
+		return this.commands.get(commandName);
 	}
 
 	@Override
@@ -38,7 +40,9 @@ public class AnsaCommandStorage implements CommandStorage {
 		LOGGER.info("Loading command {}", commandName);
 
 		this.commands.put(commandName,
-				this.commandFactory.getCommand(commandName));
+				this.commandFactory.getCommandByName(commandName));
+
+		LOGGER.info("Command {} loaded", commandName);
 	}
 
 	public static AnsaCommandStorage getInstance() {

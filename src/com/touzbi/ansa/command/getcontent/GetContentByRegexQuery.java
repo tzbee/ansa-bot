@@ -21,4 +21,9 @@ public class GetContentByRegexQuery extends QueryCommandBuilder {
 
 		return results;
 	}
+
+	@Override
+	public String toString() {
+		return "Get content by regex query";
+	}
 }

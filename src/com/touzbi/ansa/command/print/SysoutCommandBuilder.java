@@ -12,4 +12,9 @@ public class SysoutCommandBuilder extends AbstractCommandBuilder {
 		System.out.println(input);
 		return Arrays.asList(input);
 	}
+
+	@Override
+	public String toString() {
+		return "Sysout";
+	}
 }

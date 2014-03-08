@@ -2,15 +2,18 @@ package com.touzbi.ansatest.maintest;
 
 import org.junit.Test;
 
-import com.touzbi.ansa.app.AnsaApp;
-import com.touzbi.ansa.app.App;
+import com.touzbi.ansa.commandfactory.AnsaFileCommandFactory;
+import com.touzbi.ansa.commandfactory.CommandFactory;
+import com.touzbi.ansa.inputfactory.BasicFileInputFactory;
 
 public class AnsaMainTest {
 
 	@Test
 	public void test() {
-		App app = new AnsaApp();
+		CommandFactory commandFactory = new AnsaFileCommandFactory(false);
 
-		app.start();
+		commandFactory.getCommandByName("app").execute(
+				new BasicFileInputFactory("com/touzbi/ansatest/input.cfg",
+						false));
 	}
 }

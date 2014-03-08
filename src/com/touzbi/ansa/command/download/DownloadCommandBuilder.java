@@ -18,4 +18,9 @@ public class DownloadCommandBuilder extends AbstractCommandBuilder {
 		this.launcher.launch(BASE_COMMAND + " " + input);
 		return Arrays.asList(input);
 	}
+
+	@Override
+	public String toString() {
+		return "Download";
+	}
 }

@@ -25,4 +25,9 @@ public class HTTPRequestCommandBuilder extends AbstractCommandBuilder {
 
 		return Arrays.asList(result);
 	}
+
+	@Override
+	public String toString() {
+		return "HTTP Request";
+	}
 }

@@ -9,4 +9,9 @@ public class GetHTMLElementTextContent extends
 	protected String getHTMLProperty(HTMLElementWrapper htmlElementWrapper) {
 		return htmlElementWrapper.getInnerHTML();
 	}
+
+	@Override
+	public String toString() {
+		return "Get HTML Element text content";
+	}
 }

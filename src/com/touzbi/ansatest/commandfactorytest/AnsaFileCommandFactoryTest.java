@@ -12,6 +12,6 @@ public class AnsaFileCommandFactoryTest {
 		CommandFactory commandFactory = new AnsaFileCommandFactory(
 				"com/touzbi/ansatest/", false);
 
-		commandFactory.getCommand("app2").execute("http://youtube.com");
+		commandFactory.getCommandByName("app2").execute("http://youtube.com");
 	}
 }
