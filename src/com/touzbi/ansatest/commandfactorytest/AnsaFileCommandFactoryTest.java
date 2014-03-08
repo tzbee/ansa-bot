@@ -9,9 +9,9 @@ public class AnsaFileCommandFactoryTest {
 
 	@Test
 	public void test() {
-		CommandFactory commandFactory = new AnsaFileCommandFactory(
-				"com/touzbi/ansatest/", false);
+		CommandFactory commandFactory = new AnsaFileCommandFactory(false);
 
-		commandFactory.getCommandByName("app2").execute("http://youtube.com");
+		commandFactory.getCommandByName("com/touzbi/ansatest/app2").execute(
+				"http://youtube.com");
 	}
 }

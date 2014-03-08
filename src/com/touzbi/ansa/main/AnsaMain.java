@@ -1,16 +1,19 @@
 package com.touzbi.ansa.main;
 
-import com.touzbi.ansa.commandfactory.AnsaFileCommandFactory;
-import com.touzbi.ansa.commandfactory.CommandFactory;
+import com.touzbi.ansa.commandstorage.AnsaCommandStorage;
+import com.touzbi.ansa.commandstorage.CommandStorage;
 import com.touzbi.ansa.inputfactory.BasicFileInputFactory;
 
 public class AnsaMain {
-	public static void main(String[] args) {
-		CommandFactory commandFactory = new AnsaFileCommandFactory(true);
+	private static final String INPUT_CONFIG_FILE = "com/touzbi/ansatest/input.cfg";
 
-		commandFactory.getCommandByName("app")
-				.execute(
-						new BasicFileInputFactory(
-								"com/touzbi/ansatest/input.cfg", true));
+	public static void main(String[] args) {
+		CommandStorage commandStorage = AnsaCommandStorage.getInstance();
+
+		for (String commandName : args) {
+			commandStorage.getCommandByName(commandName).execute(
+					new BasicFileInputFactory(INPUT_CONFIG_FILE, true));
+
+		}
 	}
 }

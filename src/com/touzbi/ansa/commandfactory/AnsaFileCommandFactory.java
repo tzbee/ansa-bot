@@ -7,28 +7,21 @@ import com.touzbi.ansa.filecontentwrapper.BasicFileContentWrapper;
 import com.touzbi.ansa.filecontentwrapper.FileContentWrapper;
 
 public class AnsaFileCommandFactory implements CommandFactory {
-	private static final String PACKAGE_PATH = "com/touzbi/ansatest/";
+	private static final String SUFFIX = ".ansa";
 
 	private FileContentWrapper fileContentWrapper;
-	private String rootPath;
-
-	public AnsaFileCommandFactory(String rootPath, boolean isFileRelativeToJar) {
-		this.rootPath = rootPath;
-		this.fileContentWrapper = new BasicFileContentWrapper(
-				isFileRelativeToJar);
-	}
 
 	public AnsaFileCommandFactory(boolean isFileRelativeToJar) {
-		this(PACKAGE_PATH, isFileRelativeToJar);
+		this.fileContentWrapper = new BasicFileContentWrapper(
+				isFileRelativeToJar);
 	}
 
 	@Override
 	public CommandBuilder getCommandByName(String commandName) {
 		CommandBuilder commandBuilder = new MainCommandBuilder();
 
-		new AnsaANTLRWrapper(
-				this.fileContentWrapper.getFileContent(this.rootPath
-						+ commandName + ".ansa"), commandBuilder);
+		new AnsaANTLRWrapper(this.fileContentWrapper.getFileContent(commandName
+				+ SUFFIX), commandBuilder);
 
 		return commandBuilder;
 	}
