@@ -13,7 +13,6 @@ public class AnsaMainTest {
 		CommandStorage commandStorage = AnsaCommandStorage.getInstance();
 
 		commandStorage.getCommandByName("app").execute(
-				new BasicFileInputFactory("com/touzbi/ansatest/input.cfg",
-						false));
+				new BasicFileInputFactory("input.cfg", false));
 	}
 }

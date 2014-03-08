@@ -1,0 +1,3 @@
+print;
+gethtmlattribute(query:'a', attribute:'href');
+print;

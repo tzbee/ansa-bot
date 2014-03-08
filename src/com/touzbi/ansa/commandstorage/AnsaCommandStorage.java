@@ -13,6 +13,9 @@ import com.touzbi.ansa.commandfactory.CommandFactory;
 public class AnsaCommandStorage implements CommandStorage {
 	private static final Logger LOGGER = LogManager.getLogger();
 
+	//XXX To do better
+	private static final boolean FILE_RELATIVE_TO_JAR = false;
+
 	// Singleton
 	private static AnsaCommandStorage instance = null;
 
@@ -47,7 +50,7 @@ public class AnsaCommandStorage implements CommandStorage {
 
 	public static AnsaCommandStorage getInstance() {
 		if (instance == null) {
-			instance = new AnsaCommandStorage(true);
+			instance = new AnsaCommandStorage(FILE_RELATIVE_TO_JAR);
 		}
 
 		return instance;

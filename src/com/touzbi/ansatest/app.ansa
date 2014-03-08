@@ -1,8 +1,0 @@
-
-httprequest;
-gethtmlattribute(query:'div.content-wrapper div.content-inner div.video a.img-container', attribute:'href');
-httprequest;
-gethtmltext(query:'script');
-getcontentbyregex(query:'fileurl.*;');
-getcontentbyregex(query:'http.*[.]flv');
-download;
