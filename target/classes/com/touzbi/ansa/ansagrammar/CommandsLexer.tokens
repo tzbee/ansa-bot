@@ -1,8 +1,0 @@
-SYSOUT=4
-GET_HTML_ATTRIBUTE=3
-HTTP_REQUEST=2
-DOWNLOAD=1
-'gethtmlattribute'=3
-'httprequest'=2
-'download'=1
-'sysout'=4
