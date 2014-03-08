@@ -1,0 +1,19 @@
+package com.touzbi.ansatest.commandtest;
+
+import org.junit.Test;
+
+import com.touzbi.ansa.command.CommandBuilder;
+import com.touzbi.ansa.command.gethtmlelement.GetHTMLElementTextContent;
+
+public class GetHTMLElementTextContentTest {
+
+	@Test
+	public void test() {
+		CommandBuilder commandBuilder = new GetHTMLElementTextContent();
+
+		commandBuilder.addParam("query", "a[div=ap]");
+
+		System.out.println(commandBuilder
+				.execute("<a>azdzadza</a><a div=\"ap\">jjj</a>"));
+	}
+}
