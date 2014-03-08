@@ -78,7 +78,7 @@ sysout
 
 SYSOUT
 :
-	'sysout'
+	'print'
 ;
 
 
