@@ -47,7 +47,7 @@ public class AnsaCommandStorage implements CommandStorage {
 
 	public static AnsaCommandStorage getInstance() {
 		if (instance == null) {
-			instance = new AnsaCommandStorage(false);
+			instance = new AnsaCommandStorage(true);
 		}
 
 		return instance;
