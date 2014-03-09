@@ -4,9 +4,9 @@ import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.Parser;
 import org.antlr.v4.runtime.RecognitionException;
 
-import com.touzbi.ansa.generatedgrammar.AnsaGrammarLexer;
-import com.touzbi.ansa.generatedgrammar.AnsaGrammarParser;
-import com.touzbi.ansa.generatedgrammar.AnsaGrammarParser.InitContext;
+import com.touzbi.ansa.generatedantlrgrammar.AnsaGrammarLexer;
+import com.touzbi.ansa.generatedantlrgrammar.AnsaGrammarParser;
+import com.touzbi.ansa.generatedantlrgrammar.AnsaGrammarParser.InitContext;
 
 public class AnsaParserWrapper extends AbstractParserWrapper {
 	private AnsaGrammarParser ansaGrammarParser;

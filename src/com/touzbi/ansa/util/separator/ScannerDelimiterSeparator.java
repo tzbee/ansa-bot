@@ -5,8 +5,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
-public class ScannerSeparator extends AbstractSeparator {
-	public ScannerSeparator(String delimiter) {
+public class ScannerDelimiterSeparator extends AbstractDelimiterSeparator {
+	public ScannerDelimiterSeparator(String delimiter) {
 		super(delimiter);
 	}
 

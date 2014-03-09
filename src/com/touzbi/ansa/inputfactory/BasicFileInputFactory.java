@@ -2,7 +2,7 @@ package com.touzbi.ansa.inputfactory;
 
 import java.util.Collection;
 
-import com.touzbi.ansa.util.separator.ScannerSeparator;
+import com.touzbi.ansa.util.separator.ScannerDelimiterSeparator;
 import com.touzbi.ansa.util.separator.Separator;
 
 /**
@@ -11,7 +11,7 @@ import com.touzbi.ansa.util.separator.Separator;
  * @author touzbi
  */
 public class BasicFileInputFactory extends AbstractFileInputFactory {
-	private Separator separator = new ScannerSeparator("\n");
+	private Separator separator = new ScannerDelimiterSeparator("\n");
 
 	public BasicFileInputFactory(String inputFilePath, boolean relativeToJar) {
 		super(inputFilePath, relativeToJar);

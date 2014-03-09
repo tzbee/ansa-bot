@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 
-public class SplitSeparator extends AbstractSeparator {
-	public SplitSeparator(String delimiter) {
+public class SplitDelimiterSeparator extends AbstractDelimiterSeparator {
+	public SplitDelimiterSeparator(String delimiter) {
 		super(delimiter);
 	}
 
