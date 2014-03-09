@@ -2,8 +2,8 @@ package com.touzbi.ansatest.filereadertest;
 
 import org.junit.Test;
 
-import com.touzbi.ansa.util.filereaderstrategy.ClassPathRelativeFileReaderStrategy;
-import com.touzbi.ansa.util.filereaderstrategy.FileReaderStrategy;
+import com.touzbi.ansa.util.fileutils.filereaderstrategy.ClassPathRelativeFileReaderStrategy;
+import com.touzbi.ansa.util.fileutils.filereaderstrategy.FileReaderStrategy;
 
 public class ClassLoaderFileReaderTest {
 	private static final String FILE_PATH = "com/touzbi/ansatest/input.cfg";

@@ -1,4 +1,4 @@
-package com.touzbi.ansa.util.filereaderstrategy;
+package com.touzbi.ansa.util.fileutils.filereaderstrategy;
 
 import java.io.IOException;
 import java.io.InputStream;

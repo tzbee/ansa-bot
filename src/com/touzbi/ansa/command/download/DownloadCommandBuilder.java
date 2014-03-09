@@ -13,14 +13,18 @@ public class DownloadCommandBuilder extends AbstractCommandBuilder {
 	// Launcher strategy to use
 	private Launcher launcher = new BasicLauncher();
 
+	protected String getDownloadCommand() {
+		return getParamValue(BASE_COMMAND_PARAM);
+	}
+
 	@Override
 	public Collection<String> execute(String input) {
-		this.launcher.launch(getParamValue(BASE_COMMAND_PARAM) + " " + input);
+		this.launcher.launch(getDownloadCommand() + " " + input);
 		return Arrays.asList(input);
 	}
 
 	@Override
 	public String toString() {
-		return "Download with " + getParamValue(BASE_COMMAND_PARAM);
+		return "Download with " + getDownloadCommand();
 	}
 }

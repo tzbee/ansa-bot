@@ -1,4 +1,4 @@
-package com.touzbi.ansa.util.filewriterstrategy;
+package com.touzbi.ansa.util.fileutils.filewriterstrategy;
 
 import java.io.FileWriter;
 import java.io.IOException;

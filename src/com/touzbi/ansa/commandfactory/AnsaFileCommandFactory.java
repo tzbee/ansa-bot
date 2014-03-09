@@ -3,8 +3,8 @@ package com.touzbi.ansa.commandfactory;
 import com.touzbi.ansa.antlr.AnsaANTLRWrapper;
 import com.touzbi.ansa.command.CommandBuilder;
 import com.touzbi.ansa.command.main.MainCommandBuilder;
-import com.touzbi.ansa.filecontentwrapper.BasicFileContentWrapper;
-import com.touzbi.ansa.filecontentwrapper.FileContentWrapper;
+import com.touzbi.ansa.util.fileutils.filecontentwrapper.BasicFileContentWrapper;
+import com.touzbi.ansa.util.fileutils.filecontentwrapper.FileContentWrapper;
 
 public class AnsaFileCommandFactory implements CommandFactory {
 	private static final String SUFFIX = ".ansa";

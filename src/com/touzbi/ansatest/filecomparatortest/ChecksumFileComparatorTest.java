@@ -4,8 +4,8 @@ import java.io.File;
 
 import org.junit.Test;
 
-import com.touzbi.ansa.util.filemanager.filecomparator.ChecksumFileComparator;
-import com.touzbi.ansa.util.filemanager.filecomparator.FileComparator;
+import com.touzbi.ansa.util.fileutils.filecomparator.ChecksumFileComparator;
+import com.touzbi.ansa.util.fileutils.filecomparator.FileComparator;
 
 public class ChecksumFileComparatorTest {
 	private static final String HOME = "/home/touzbi/Downloads/test/";

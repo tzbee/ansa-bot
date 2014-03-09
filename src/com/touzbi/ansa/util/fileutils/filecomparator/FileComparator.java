@@ -1,4 +1,4 @@
-package com.touzbi.ansa.util.filemanager.filecomparator;
+package com.touzbi.ansa.util.fileutils.filecomparator;
 
 import java.io.File;
 import java.util.Comparator;

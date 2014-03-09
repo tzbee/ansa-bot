@@ -1,6 +1,6 @@
-package com.touzbi.ansa.util.filemanager.duplicatehandler;
+package com.touzbi.ansa.util.fileutils.duplicatehandler;
 
-import com.touzbi.ansa.util.filemanager.filecomparator.SizeFileComparator;
+import com.touzbi.ansa.util.fileutils.filecomparator.SizeFileComparator;
 
 public class FileSizeDuplicatesHandler extends FileDuplicatesHandler {
 	public FileSizeDuplicatesHandler() {

@@ -5,8 +5,8 @@ import org.junit.Test;
 import com.touzbi.ansa.antlr.AbstractANTLRWrapper;
 import com.touzbi.ansa.antlr.AnsaANTLRWrapper;
 import com.touzbi.ansa.command.main.MainCommandBuilder;
-import com.touzbi.ansa.filecontentwrapper.BasicFileContentWrapper;
-import com.touzbi.ansa.filecontentwrapper.FileContentWrapper;
+import com.touzbi.ansa.util.fileutils.filecontentwrapper.BasicFileContentWrapper;
+import com.touzbi.ansa.util.fileutils.filecontentwrapper.FileContentWrapper;
 
 public class AnsaAntlrWrapperTest {
 	private static final String FILE_PATH = "com/touzbi/ansatest/app.ansa";

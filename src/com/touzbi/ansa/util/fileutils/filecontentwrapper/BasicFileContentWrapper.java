@@ -1,11 +1,11 @@
-package com.touzbi.ansa.filecontentwrapper;
+package com.touzbi.ansa.util.fileutils.filecontentwrapper;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.touzbi.ansa.util.filereaderstrategy.ClassPathRelativeFileReaderStrategy;
-import com.touzbi.ansa.util.filereaderstrategy.FileReaderStrategy;
-import com.touzbi.ansa.util.filereaderstrategy.JarDirectoryRelativeFileReaderStrategy;
+import com.touzbi.ansa.util.fileutils.filereaderstrategy.ClassPathRelativeFileReaderStrategy;
+import com.touzbi.ansa.util.fileutils.filereaderstrategy.FileReaderStrategy;
+import com.touzbi.ansa.util.fileutils.filereaderstrategy.JarDirectoryRelativeFileReaderStrategy;
 
 public class BasicFileContentWrapper implements FileContentWrapper {
 	@SuppressWarnings("unused")

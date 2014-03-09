@@ -1,4 +1,4 @@
-package com.touzbi.ansa.util.filemanager.duplicatehandler;
+package com.touzbi.ansa.util.fileutils.duplicatehandler;
 
 import java.util.ArrayList;
 import java.util.Collection;

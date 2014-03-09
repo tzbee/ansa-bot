@@ -4,10 +4,10 @@ import java.io.File;
 
 import org.junit.Test;
 
-import com.touzbi.ansa.util.filemanager.FileManager;
-import com.touzbi.ansa.util.filemanager.MyFileManager;
-import com.touzbi.ansa.util.filemanager.duplicatehandler.FileDuplicatesHandler;
-import com.touzbi.ansa.util.filemanager.duplicatehandler.FileSizeDuplicatesHandler;
+import com.touzbi.ansa.util.fileutils.duplicatehandler.FileDuplicatesHandler;
+import com.touzbi.ansa.util.fileutils.duplicatehandler.FileSizeDuplicatesHandler;
+import com.touzbi.ansa.util.fileutils.filemanager.FileManager;
+import com.touzbi.ansa.util.fileutils.filemanager.MyFileManager;
 
 public class FileManagerDeleteDuplicatesTest {
 	private static final String FOLDER_PATH = "/home/touzbi/Downloads/test";

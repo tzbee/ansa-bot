@@ -1,4 +1,4 @@
-package com.touzbi.ansa.util.filemanager;
+package com.touzbi.ansa.util.fileutils.filemanager;
 
 import java.io.File;
 import java.util.Collection;
@@ -7,7 +7,7 @@ import java.util.HashSet;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.touzbi.ansa.util.filemanager.duplicatehandler.FileDuplicatesHandler;
+import com.touzbi.ansa.util.fileutils.duplicatehandler.FileDuplicatesHandler;
 
 public class MyFileManager implements FileManager {
 	private static final Logger LOGGER = LogManager.getLogger();
