@@ -13,7 +13,7 @@ import com.touzbi.ansa.commandfactory.CommandFactory;
 public class AnsaCommandStorage implements CommandStorage {
 	private static final Logger LOGGER = LogManager.getLogger();
 
-	//XXX To do better
+	// XXX To do better
 	private static final boolean FILE_RELATIVE_TO_JAR = false;
 
 	// Singleton

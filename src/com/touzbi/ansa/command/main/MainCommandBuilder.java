@@ -21,6 +21,6 @@ public class MainCommandBuilder extends AbstractCommandBuilder {
 
 	@Override
 	public String toString() {
-		return "Main command builder " + super.toString();
+		return "Main command: " + super.toString();
 	}
 }

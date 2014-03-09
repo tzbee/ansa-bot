@@ -30,13 +30,13 @@ public abstract class AbstractCommandBuilder implements CommandBuilder {
 
 	@Override
 	public Collection<String> execute(Collection<String> inputs) {
-		Collection<String> output = new ArrayList<String>();
+		Collection<String> outputs = new ArrayList<String>();
 
 		for (String input : inputs) {
-			output.addAll(execute(input));
+			outputs.addAll(execute(input));
 		}
 
-		return output;
+		return outputs;
 	}
 
 	@Override

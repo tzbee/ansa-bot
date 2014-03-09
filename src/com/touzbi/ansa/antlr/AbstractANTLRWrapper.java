@@ -3,8 +3,8 @@ package com.touzbi.ansa.antlr;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
-import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.InitContext;
 import com.touzbi.ansa.antlr.parserwrapper.ParserWrapper;
+import com.touzbi.ansa.generatedgrammar.AnsaGrammarParser.InitContext;
 
 public abstract class AbstractANTLRWrapper {
 	private ParseTreeWalker parseTreeWalker = new ParseTreeWalker();

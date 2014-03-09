@@ -1,14 +1,5 @@
-package com.touzbi.ansa.ansagrammar;
+package com.touzbi.ansa.ansagrammarlistener;
 
-import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.CommandBlockContext;
-import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.DownloadContext;
-import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.FormatContext;
-import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.GetcontentbyregexContext;
-import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.GethtmlattributeContext;
-import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.GethtmltextContext;
-import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.HttprequestContext;
-import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.ParamPairContext;
-import com.touzbi.ansa.ansagrammar.AnsaGrammarParser.SysoutContext;
 import com.touzbi.ansa.command.CommandBuilder;
 import com.touzbi.ansa.command.download.DownloadCommandBuilder;
 import com.touzbi.ansa.command.format.FormatStringCommand;
@@ -17,6 +8,16 @@ import com.touzbi.ansa.command.gethtmlelement.GetHTMLAttributeCommandBuilder;
 import com.touzbi.ansa.command.gethtmlelement.GetHTMLElementTextContent;
 import com.touzbi.ansa.command.httprequest.HTTPRequestCommandBuilder;
 import com.touzbi.ansa.command.print.SysoutCommandBuilder;
+import com.touzbi.ansa.generatedgrammar.AnsaGrammarBaseListener;
+import com.touzbi.ansa.generatedgrammar.AnsaGrammarParser.CommandBlockContext;
+import com.touzbi.ansa.generatedgrammar.AnsaGrammarParser.DownloadContext;
+import com.touzbi.ansa.generatedgrammar.AnsaGrammarParser.FormatContext;
+import com.touzbi.ansa.generatedgrammar.AnsaGrammarParser.GetcontentbyregexContext;
+import com.touzbi.ansa.generatedgrammar.AnsaGrammarParser.GethtmlattributeContext;
+import com.touzbi.ansa.generatedgrammar.AnsaGrammarParser.GethtmltextContext;
+import com.touzbi.ansa.generatedgrammar.AnsaGrammarParser.HttprequestContext;
+import com.touzbi.ansa.generatedgrammar.AnsaGrammarParser.ParamPairContext;
+import com.touzbi.ansa.generatedgrammar.AnsaGrammarParser.SysoutContext;
 import com.touzbi.ansa.util.stringformatter.EdgeCutterStringFormatter;
 import com.touzbi.ansa.util.stringformatter.StringFormatter;
 
@@ -28,7 +29,7 @@ public class MyAnsaGrammarListener extends AnsaGrammarBaseListener {
 	// Command Builder
 	private CommandBuilder mainCommandBuilder;
 
-	// tmp
+	// Temporary reference
 	private CommandBuilder currentCommandBuilder;
 
 	public MyAnsaGrammarListener(CommandBuilder mainCommandBuilder) {
