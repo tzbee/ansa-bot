@@ -7,9 +7,16 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.touzbi.ansa.command.CommandBuilder;
+import com.touzbi.ansa.command.httprequest.HTTPRequestCommandBuilder;
+import com.touzbi.ansa.command.print.SysoutCommandBuilder;
 import com.touzbi.ansa.commandfactory.AnsaFileCommandFactory;
 import com.touzbi.ansa.commandfactory.CommandFactory;
 
+/**
+ * Singleton Command Storage
+ * 
+ * @author touzbi
+ */
 public class AnsaCommandStorage implements CommandStorage {
 	private static final Logger LOGGER = LogManager.getLogger();
 
@@ -24,6 +31,22 @@ public class AnsaCommandStorage implements CommandStorage {
 
 	private AnsaCommandStorage(boolean isFileRelativeToJar) {
 		this.commandFactory = new AnsaFileCommandFactory(isFileRelativeToJar);
+
+		// Built in commands
+		addCommand("httprequest", new HTTPRequestCommandBuilder());
+		addCommand("print", new SysoutCommandBuilder());
+	}
+
+	public static AnsaCommandStorage getInstance() {
+		if (instance == null) {
+			instance = new AnsaCommandStorage(FILE_RELATIVE_TO_JAR);
+		}
+
+		return instance;
+	}
+
+	protected void addCommand(String commandName, CommandBuilder commandBuilder) {
+		this.commands.put(commandName, commandBuilder);
 	}
 
 	@Override
@@ -46,14 +69,6 @@ public class AnsaCommandStorage implements CommandStorage {
 				this.commandFactory.getCommandByName(commandName));
 
 		LOGGER.info("Command {} loaded", commandName);
-	}
-
-	public static AnsaCommandStorage getInstance() {
-		if (instance == null) {
-			instance = new AnsaCommandStorage(FILE_RELATIVE_TO_JAR);
-		}
-
-		return instance;
 	}
 
 	@Override

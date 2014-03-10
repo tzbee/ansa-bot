@@ -5,5 +5,5 @@ import java.util.Collection;
 public interface StringFilter {
 	boolean isValidString(String str);
 
-	Collection<String> filter(Collection<String> strs);
+	Collection<String> filter(Collection<String> str);
 }

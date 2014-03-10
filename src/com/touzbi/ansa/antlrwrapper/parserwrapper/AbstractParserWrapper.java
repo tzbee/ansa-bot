@@ -1,4 +1,4 @@
-package com.touzbi.ansa.antlr.parserwrapper;
+package com.touzbi.ansa.antlrwrapper.parserwrapper;
 
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.Lexer;

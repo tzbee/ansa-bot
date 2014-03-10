@@ -1,5 +1,5 @@
 // Generated from Primitive.g4 by ANTLR 4.1
-package com.touzbi.ansa.generatedantlrgrammar;
+package com.touzbi.ansa.antlrgrammar;
 
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Lexer;

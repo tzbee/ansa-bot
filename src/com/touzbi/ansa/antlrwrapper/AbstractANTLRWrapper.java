@@ -1,10 +1,10 @@
-package com.touzbi.ansa.antlr;
+package com.touzbi.ansa.antlrwrapper;
 
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
-import com.touzbi.ansa.antlr.parserwrapper.ParserWrapper;
-import com.touzbi.ansa.generatedantlrgrammar.AnsaGrammarParser.InitContext;
+import com.touzbi.ansa.antlrgrammar.AnsaGrammarParser.InitContext;
+import com.touzbi.ansa.antlrwrapper.parserwrapper.ParserWrapper;
 
 public abstract class AbstractANTLRWrapper {
 	private ParseTreeWalker parseTreeWalker = new ParseTreeWalker();

@@ -1,6 +1,6 @@
 package com.touzbi.ansa.commandfactory;
 
-import com.touzbi.ansa.antlr.AnsaANTLRWrapper;
+import com.touzbi.ansa.antlrwrapper.AnsaANTLRWrapper;
 import com.touzbi.ansa.command.CommandBuilder;
 import com.touzbi.ansa.command.main.MainCommandBuilder;
 import com.touzbi.ansa.util.fileutils.filecontentwrapper.BasicFileContentWrapper;

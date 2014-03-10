@@ -1,12 +1,12 @@
-package com.touzbi.ansa.antlr.parserwrapper;
+package com.touzbi.ansa.antlrwrapper.parserwrapper;
 
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.Parser;
 import org.antlr.v4.runtime.RecognitionException;
 
-import com.touzbi.ansa.generatedantlrgrammar.AnsaGrammarLexer;
-import com.touzbi.ansa.generatedantlrgrammar.AnsaGrammarParser;
-import com.touzbi.ansa.generatedantlrgrammar.AnsaGrammarParser.InitContext;
+import com.touzbi.ansa.antlrgrammar.AnsaGrammarLexer;
+import com.touzbi.ansa.antlrgrammar.AnsaGrammarParser;
+import com.touzbi.ansa.antlrgrammar.AnsaGrammarParser.InitContext;
 
 public class AnsaParserWrapper extends AbstractParserWrapper {
 	private AnsaGrammarParser ansaGrammarParser;
