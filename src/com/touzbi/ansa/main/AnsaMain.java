@@ -20,7 +20,6 @@ public class AnsaMain {
 			} else {
 				inputFactories.add(new BasicFileInputFactory(args[i], true));
 			}
-
 		}
 
 		commandLoader.getCommandByName(commandName)
