@@ -26,8 +26,14 @@ public abstract class AbstractCommandBuilder implements CommandBuilder {
 	}
 
 	@Override
-	public Collection<String> execute(InputFactory inputFactory) {
-		return execute(inputFactory.getInputs());
+	public Collection<String> execute(InputFactory... inputFactories) {
+		Collection<String> inputs = new ArrayList<String>();
+
+		for (InputFactory inputFactory : inputFactories) {
+			inputs.addAll(inputFactory.getInputs());
+		}
+
+		return execute(inputs);
 	}
 
 	@Override

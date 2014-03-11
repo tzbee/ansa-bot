@@ -21,7 +21,7 @@ public class HTTPRequestCommandBuilder extends AbstractCommandBuilder {
 	public Collection<String> execute(String input) {
 		LOGGER.info("Requesting {}..", input);
 
-		//XXX URL Encoding - to do better
+		// XXX URL Encoding - to do better
 		input = new ReplacingFormatter(" ", "%20").format(input);
 
 		String result = this.fileReader.readToString(input);

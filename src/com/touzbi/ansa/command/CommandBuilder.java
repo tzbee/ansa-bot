@@ -27,7 +27,7 @@ public interface CommandBuilder {
 
 	Collection<String> execute(Collection<String> inputs);
 
-	Collection<String> execute(InputFactory inputFactory);
+	Collection<String> execute(InputFactory... inputFactories);
 
 	/**
 	 * Add a command builder
