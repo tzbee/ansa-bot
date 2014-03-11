@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 import com.touzbi.ansa.command.AbstractCommandBuilder;
 import com.touzbi.ansa.util.fileutils.filereaderstrategy.FileReaderStrategy;
 import com.touzbi.ansa.util.fileutils.filereaderstrategy.URLFileReaderStrategy;
+import com.touzbi.ansa.util.stringformatter.ReplacingFormatter;
 
 public class HTTPRequestCommandBuilder extends AbstractCommandBuilder {
 	private static final Logger LOGGER = LogManager.getLogger();
@@ -19,6 +20,9 @@ public class HTTPRequestCommandBuilder extends AbstractCommandBuilder {
 	@Override
 	public Collection<String> execute(String input) {
 		LOGGER.info("Requesting {}..", input);
+
+		//XXX URL Encoding - to do better
+		input = new ReplacingFormatter(" ", "%20").format(input);
 
 		String result = this.fileReader.readToString(input);
 
