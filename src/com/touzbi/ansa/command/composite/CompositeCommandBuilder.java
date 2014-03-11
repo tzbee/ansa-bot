@@ -1,4 +1,4 @@
-package com.touzbi.ansa.command.main;
+package com.touzbi.ansa.command.composite;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -6,7 +6,7 @@ import java.util.Collection;
 import com.touzbi.ansa.command.AbstractCommandBuilder;
 import com.touzbi.ansa.command.CommandBuilder;
 
-public class MainCommandBuilder extends AbstractCommandBuilder {
+public class CompositeCommandBuilder extends AbstractCommandBuilder {
 
 	@Override
 	public Collection<String> execute(String input) {
@@ -21,6 +21,6 @@ public class MainCommandBuilder extends AbstractCommandBuilder {
 
 	@Override
 	public String toString() {
-		return "Main command: " + super.toString();
+		return "Composite command: " + super.toString();
 	}
 }

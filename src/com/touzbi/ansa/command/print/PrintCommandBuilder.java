@@ -5,7 +5,7 @@ import java.util.Collection;
 
 import com.touzbi.ansa.command.AbstractCommandBuilder;
 
-public class SysoutCommandBuilder extends AbstractCommandBuilder {
+public class PrintCommandBuilder extends AbstractCommandBuilder {
 
 	@Override
 	public Collection<String> execute(String input) {
@@ -15,6 +15,6 @@ public class SysoutCommandBuilder extends AbstractCommandBuilder {
 
 	@Override
 	public String toString() {
-		return "Sysout";
+		return "Print";
 	}
 }

@@ -1,6 +1,6 @@
 grammar AnsaGrammar;
 
-import Comments, Commands, Params;
+import Comments, Params, Primitives;
 
 init
 :
@@ -12,8 +12,10 @@ init
 commandBlock
 :
 	commandId paramBlock*
-; 
+;
 
-
-
+commandId
+:
+	ID
+;
 

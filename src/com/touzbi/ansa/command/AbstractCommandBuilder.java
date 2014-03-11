@@ -1,6 +1,7 @@
 package com.touzbi.ansa.command;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,8 +14,9 @@ public abstract class AbstractCommandBuilder implements CommandBuilder {
 	protected Collection<CommandBuilder> commandBuilders = new ArrayList<CommandBuilder>();
 
 	@Override
-	public void addParam(String paramName, String paramValue) {
+	public CommandBuilder addParam(String paramName, String paramValue) {
 		this.params.put(paramName, paramValue);
+		return this;
 	}
 
 	@Override
@@ -40,8 +42,15 @@ public abstract class AbstractCommandBuilder implements CommandBuilder {
 	}
 
 	@Override
-	public void addCommandBuilder(CommandBuilder commandBuilder) {
-		this.commandBuilders.add(commandBuilder);
+	public CommandBuilder addCommandBuilders(
+			Collection<CommandBuilder> commandBuilders) {
+		this.commandBuilders.addAll(commandBuilders);
+		return this;
+	}
+
+	@Override
+	public CommandBuilder addCommandBuilders(CommandBuilder... commandBuilders) {
+		return addCommandBuilders(Arrays.asList(commandBuilders));
 	}
 
 	@Override

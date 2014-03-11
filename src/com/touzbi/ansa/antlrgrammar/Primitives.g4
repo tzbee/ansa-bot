@@ -27,3 +27,7 @@ WS
 	[ \r\n\t]+ -> skip
 ;
 
+ID:
+
+	LETTER+
+; 

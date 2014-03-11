@@ -22,18 +22,17 @@ paramPair
 
 paramName
 :
-	PARAM_ID
+	ID
 ;
+
+
 
 paramValue
 :
 	QUOTED_STRING
 ;
 
-PARAM_ID
-:
-	LETTER+
-;
+
 
 PARAM_DELIMITER
 :

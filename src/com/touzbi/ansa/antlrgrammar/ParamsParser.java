@@ -19,10 +19,10 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 public class ParamsParser extends Parser {
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache = new PredictionContextCache();
-	public static final int T__2 = 1, T__1 = 2, T__0 = 3, PARAM_ID = 4,
-			PARAM_DELIMITER = 5, QUOTED_STRING = 6, SINGLE_QUOTE = 7, WS = 8;
+	public static final int T__2 = 1, T__1 = 2, T__0 = 3, PARAM_DELIMITER = 4,
+			QUOTED_STRING = 5, SINGLE_QUOTE = 6, WS = 7, ID = 8;
 	public static final String[] tokenNames = { "<INVALID>", "')'", "','",
-			"'('", "PARAM_ID", "':'", "QUOTED_STRING", "'''", "WS" };
+			"'('", "':'", "QUOTED_STRING", "'''", "WS", "ID" };
 	public static final int RULE_paramBlock = 0, RULE_paramList = 1,
 			RULE_paramPair = 2, RULE_paramName = 3, RULE_paramValue = 4;
 	public static final String[] ruleNames = { "paramBlock", "paramList",
@@ -230,8 +230,8 @@ public class ParamsParser extends Parser {
 	}
 
 	public static class ParamNameContext extends ParserRuleContext {
-		public TerminalNode PARAM_ID() {
-			return getToken(ParamsParser.PARAM_ID, 0);
+		public TerminalNode ID() {
+			return getToken(ParamsParser.ID, 0);
 		}
 
 		public ParamNameContext(ParserRuleContext parent, int invokingState) {
@@ -263,7 +263,7 @@ public class ParamsParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 				setState(26);
-				match(PARAM_ID);
+				match(ID);
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -327,8 +327,8 @@ public class ParamsParser extends Parser {
 			+ "\2\f\3\2\2\2\4\20\3\2\2\2\6\30\3\2\2\2\b\34\3\2\2\2\n\36\3\2\2\2\f\r\7"
 			+ "\5\2\2\r\16\5\4\3\2\16\17\7\3\2\2\17\3\3\2\2\2\20\25\5\6\4\2\21\22\7\4"
 			+ "\2\2\22\24\5\6\4\2\23\21\3\2\2\2\24\27\3\2\2\2\25\23\3\2\2\2\25\26\3\2"
-			+ "\2\2\26\5\3\2\2\2\27\25\3\2\2\2\30\31\5\b\5\2\31\32\7\7\2\2\32\33\5\n"
-			+ "\6\2\33\7\3\2\2\2\34\35\7\6\2\2\35\t\3\2\2\2\36\37\7\b\2\2\37\13\3\2\2"
+			+ "\2\2\26\5\3\2\2\2\27\25\3\2\2\2\30\31\5\b\5\2\31\32\7\6\2\2\32\33\5\n"
+			+ "\6\2\33\7\3\2\2\2\34\35\7\n\2\2\35\t\3\2\2\2\36\37\7\7\2\2\37\13\3\2\2"
 			+ "\2\3\25";
 	public static final ATN _ATN = ATNSimulator.deserialize(_serializedATN
 			.toCharArray());

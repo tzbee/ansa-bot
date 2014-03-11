@@ -20,11 +20,11 @@ public class AnsaGrammarParser extends Parser {
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache = new PredictionContextCache();
 	public static final int T__3 = 1, T__2 = 2, T__1 = 3, T__0 = 4,
-			LINE_COMMENT = 5, COMMAND_ID = 6, PARAM_ID = 7,
-			PARAM_DELIMITER = 8, QUOTED_STRING = 9, SINGLE_QUOTE = 10, WS = 11;
+			LINE_COMMENT = 5, PARAM_DELIMITER = 6, QUOTED_STRING = 7,
+			SINGLE_QUOTE = 8, WS = 9, ID = 10;
 	public static final String[] tokenNames = { "<INVALID>", "')'", "','",
-			"'('", "';'", "LINE_COMMENT", "COMMAND_ID", "PARAM_ID", "':'",
-			"QUOTED_STRING", "'''", "WS" };
+			"'('", "';'", "LINE_COMMENT", "':'", "QUOTED_STRING", "'''", "WS",
+			"ID" };
 	public static final int RULE_init = 0, RULE_commandBlock = 1,
 			RULE_commandId = 2, RULE_paramBlock = 3, RULE_paramList = 4,
 			RULE_paramPair = 5, RULE_paramName = 6, RULE_paramValue = 7;
@@ -99,7 +99,7 @@ public class AnsaGrammarParser extends Parser {
 				setState(21);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la == COMMAND_ID) {
+				while (_la == ID) {
 					{
 						{
 							setState(16);
@@ -194,8 +194,8 @@ public class AnsaGrammarParser extends Parser {
 	}
 
 	public static class CommandIdContext extends ParserRuleContext {
-		public TerminalNode COMMAND_ID() {
-			return getToken(AnsaGrammarParser.COMMAND_ID, 0);
+		public TerminalNode ID() {
+			return getToken(AnsaGrammarParser.ID, 0);
 		}
 
 		public CommandIdContext(ParserRuleContext parent, int invokingState) {
@@ -227,7 +227,7 @@ public class AnsaGrammarParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 				setState(31);
-				match(COMMAND_ID);
+				match(ID);
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -415,8 +415,8 @@ public class AnsaGrammarParser extends Parser {
 	}
 
 	public static class ParamNameContext extends ParserRuleContext {
-		public TerminalNode PARAM_ID() {
-			return getToken(AnsaGrammarParser.PARAM_ID, 0);
+		public TerminalNode ID() {
+			return getToken(AnsaGrammarParser.ID, 0);
 		}
 
 		public ParamNameContext(ParserRuleContext parent, int invokingState) {
@@ -448,7 +448,7 @@ public class AnsaGrammarParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 				setState(49);
-				match(PARAM_ID);
+				match(ID);
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -506,7 +506,7 @@ public class AnsaGrammarParser extends Parser {
 		return _localctx;
 	}
 
-	public static final String _serializedATN = "\3\uacf5\uee8c\u4f5d\u8b0d\u4a45\u78bd\u1b2f\u3378\3\r8\4\2\t\2\4\3\t"
+	public static final String _serializedATN = "\3\uacf5\uee8c\u4f5d\u8b0d\u4a45\u78bd\u1b2f\u3378\3\f8\4\2\t\2\4\3\t"
 			+ "\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\3\2\3\2\3\2\7\2\26"
 			+ "\n\2\f\2\16\2\31\13\2\3\3\3\3\7\3\35\n\3\f\3\16\3 \13\3\3\4\3\4\3\5\3"
 			+ "\5\3\5\3\5\3\6\3\6\3\6\7\6+\n\6\f\6\16\6.\13\6\3\7\3\7\3\7\3\7\3\b\3\b"
@@ -515,11 +515,11 @@ public class AnsaGrammarParser extends Parser {
 			+ "\2\22\23\5\4\3\2\23\24\7\6\2\2\24\26\3\2\2\2\25\22\3\2\2\2\26\31\3\2\2"
 			+ "\2\27\25\3\2\2\2\27\30\3\2\2\2\30\3\3\2\2\2\31\27\3\2\2\2\32\36\5\6\4"
 			+ "\2\33\35\5\b\5\2\34\33\3\2\2\2\35 \3\2\2\2\36\34\3\2\2\2\36\37\3\2\2\2"
-			+ "\37\5\3\2\2\2 \36\3\2\2\2!\"\7\b\2\2\"\7\3\2\2\2#$\7\5\2\2$%\5\n\6\2%"
+			+ "\37\5\3\2\2\2 \36\3\2\2\2!\"\7\f\2\2\"\7\3\2\2\2#$\7\5\2\2$%\5\n\6\2%"
 			+ "&\7\3\2\2&\t\3\2\2\2\',\5\f\7\2()\7\4\2\2)+\5\f\7\2*(\3\2\2\2+.\3\2\2"
-			+ "\2,*\3\2\2\2,-\3\2\2\2-\13\3\2\2\2.,\3\2\2\2/\60\5\16\b\2\60\61\7\n\2"
-			+ "\2\61\62\5\20\t\2\62\r\3\2\2\2\63\64\7\t\2\2\64\17\3\2\2\2\65\66\7\13"
-			+ "\2\2\66\21\3\2\2\2\5\27\36,";
+			+ "\2,*\3\2\2\2,-\3\2\2\2-\13\3\2\2\2.,\3\2\2\2/\60\5\16\b\2\60\61\7\b\2"
+			+ "\2\61\62\5\20\t\2\62\r\3\2\2\2\63\64\7\f\2\2\64\17\3\2\2\2\65\66\7\t\2"
+			+ "\2\66\21\3\2\2\2\5\27\36,";
 	public static final ATN _ATN = ATNSimulator.deserialize(_serializedATN
 			.toCharArray());
 	static {

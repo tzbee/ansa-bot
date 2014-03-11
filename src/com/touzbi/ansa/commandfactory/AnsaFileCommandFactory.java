@@ -2,7 +2,8 @@ package com.touzbi.ansa.commandfactory;
 
 import com.touzbi.ansa.antlrwrapper.AnsaANTLRWrapper;
 import com.touzbi.ansa.command.CommandBuilder;
-import com.touzbi.ansa.command.main.MainCommandBuilder;
+import com.touzbi.ansa.command.composite.CompositeCommandBuilder;
+import com.touzbi.ansa.commandloader.CommandLoader;
 import com.touzbi.ansa.util.fileutils.filecontentwrapper.BasicFileContentWrapper;
 import com.touzbi.ansa.util.fileutils.filecontentwrapper.FileContentWrapper;
 
@@ -10,18 +11,25 @@ public class AnsaFileCommandFactory implements CommandFactory {
 	private static final String SUFFIX = ".ansa";
 
 	private FileContentWrapper fileContentWrapper;
+	private CommandLoader commandLoader;
+	private String commandName;
 
-	public AnsaFileCommandFactory(boolean isFileRelativeToJar) {
+	public AnsaFileCommandFactory(CommandLoader commandLoader,
+			boolean isFileRelativeToJar, String commandName) {
+		this.commandLoader = commandLoader;
+		this.commandName = commandName;
 		this.fileContentWrapper = new BasicFileContentWrapper(
 				isFileRelativeToJar);
 	}
 
 	@Override
-	public CommandBuilder getCommandByName(String commandName) {
-		CommandBuilder commandBuilder = new MainCommandBuilder();
+	public CommandBuilder getCommand() {
+		CommandBuilder commandBuilder = new CompositeCommandBuilder();
 
-		new AnsaANTLRWrapper(this.fileContentWrapper.getFileContent(commandName
-				+ SUFFIX), commandBuilder);
+		// Build the command from the file
+		new AnsaANTLRWrapper(this.commandLoader,
+				this.fileContentWrapper.getFileContent(this.commandName
+						+ SUFFIX), commandBuilder);
 
 		return commandBuilder;
 	}

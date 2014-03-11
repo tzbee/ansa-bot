@@ -5,11 +5,12 @@ import com.touzbi.ansa.antlrgrammar.AnsaGrammarParser.CommandBlockContext;
 import com.touzbi.ansa.antlrgrammar.AnsaGrammarParser.CommandIdContext;
 import com.touzbi.ansa.antlrgrammar.AnsaGrammarParser.ParamPairContext;
 import com.touzbi.ansa.command.CommandBuilder;
-import com.touzbi.ansa.commandstorage.AnsaCommandStorage;
+import com.touzbi.ansa.commandloader.CommandLoader;
 import com.touzbi.ansa.util.stringformatter.EdgeCutterStringFormatter;
 import com.touzbi.ansa.util.stringformatter.StringFormatter;
 
 public class BasicAnsaGrammarListener extends AnsaGrammarBaseListener {
+	private CommandLoader commandLoader;
 
 	// Cuts the first and last character of a string
 	private StringFormatter edgeCutter = new EdgeCutterStringFormatter();
@@ -20,7 +21,9 @@ public class BasicAnsaGrammarListener extends AnsaGrammarBaseListener {
 	// Temporary reference
 	private CommandBuilder currentCommandBuilder;
 
-	public BasicAnsaGrammarListener(CommandBuilder mainCommandBuilder) {
+	public BasicAnsaGrammarListener(CommandLoader commandLoader,
+			CommandBuilder mainCommandBuilder) {
+		this.commandLoader = commandLoader;
 		this.mainCommandBuilder = mainCommandBuilder;
 	}
 
@@ -35,8 +38,8 @@ public class BasicAnsaGrammarListener extends AnsaGrammarBaseListener {
 
 	@Override
 	public void exitCommandId(CommandIdContext ctx) {
-		this.currentCommandBuilder = AnsaCommandStorage.getInstance()
-				.getCommandByName(ctx.getText());
+		this.currentCommandBuilder = this.commandLoader.getCommandByName(ctx
+				.getText());
 	}
 
 	/**
@@ -53,6 +56,6 @@ public class BasicAnsaGrammarListener extends AnsaGrammarBaseListener {
 
 	@Override
 	public void exitCommandBlock(CommandBlockContext ctx) {
-		this.mainCommandBuilder.addCommandBuilder(this.currentCommandBuilder);
+		this.mainCommandBuilder.addCommandBuilders(this.currentCommandBuilder);
 	}
 }

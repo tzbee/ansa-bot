@@ -6,13 +6,13 @@ import com.touzbi.ansa.inputfactory.InputFactory;
 
 public interface CommandBuilder {
 	/**
-	 * Params handling
+	 * Parameters handling
 	 * 
 	 * @param paramName
 	 * @param paramValue
 	 */
 
-	void addParam(String paramName, String paramValue);
+	CommandBuilder addParam(String paramName, String paramValue);
 
 	String getParamValue(String paramName);
 
@@ -35,5 +35,7 @@ public interface CommandBuilder {
 	 * @param commandBuilder
 	 */
 
-	void addCommandBuilder(CommandBuilder commandBuilder);
+	CommandBuilder addCommandBuilders(Collection<CommandBuilder> commandBuilders);
+
+	CommandBuilder addCommandBuilders(CommandBuilder... commandBuilders);
 }
