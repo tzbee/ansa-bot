@@ -1,6 +1,7 @@
 package com.touzbi.ansa.util.stringfilter;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 
 public abstract class AbstractStringFilter implements StringFilter {
@@ -15,5 +16,10 @@ public abstract class AbstractStringFilter implements StringFilter {
 		}
 
 		return results;
+	}
+
+	@Override
+	public Collection<String> filter(String... str) {
+		return filter(Arrays.asList(str));
 	}
 }

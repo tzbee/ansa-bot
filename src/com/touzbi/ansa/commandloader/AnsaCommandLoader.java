@@ -10,6 +10,7 @@ import com.touzbi.ansa.command.CommandBuilder;
 import com.touzbi.ansa.commandfactory.AnsaFileCommandFactory;
 import com.touzbi.ansa.commandfactory.CommandFactory;
 import com.touzbi.ansa.commandfactory.DownloadCommandFactory;
+import com.touzbi.ansa.commandfactory.FilterCommandFactory;
 import com.touzbi.ansa.commandfactory.FormatStringCommandFactory;
 import com.touzbi.ansa.commandfactory.GetContentByRegexQueryFactory;
 import com.touzbi.ansa.commandfactory.GetHTMLAttributeCommandFactory;
@@ -50,7 +51,7 @@ public class AnsaCommandLoader implements CommandLoader {
 				new GetHTMLElementTextContentFactory());
 		this.commandMap.put("download", new DownloadCommandFactory());
 		this.commandMap.put("format", new FormatStringCommandFactory());
-
+		this.commandMap.put("filter", new FilterCommandFactory());
 	}
 
 	public static AnsaCommandLoader getInstance() {

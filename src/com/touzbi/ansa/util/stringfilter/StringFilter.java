@@ -6,4 +6,6 @@ public interface StringFilter {
 	boolean isValidString(String str);
 
 	Collection<String> filter(Collection<String> str);
+
+	Collection<String> filter(String... str);
 }
