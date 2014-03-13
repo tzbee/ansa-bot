@@ -10,6 +10,22 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface ParamsListener extends ParseTreeListener {
 	/**
+	 * Enter a parse tree produced by {@link ParamsParser#paramRef}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void enterParamRef(@NotNull ParamsParser.ParamRefContext ctx);
+
+	/**
+	 * Exit a parse tree produced by {@link ParamsParser#paramRef}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void exitParamRef(@NotNull ParamsParser.ParamRefContext ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link ParamsParser#paramList}.
 	 * 
 	 * @param ctx

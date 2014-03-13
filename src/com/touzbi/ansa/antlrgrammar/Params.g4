@@ -25,14 +25,16 @@ paramName
 	ID
 ;
 
-
-
 paramValue
 :
 	QUOTED_STRING
+	| paramRef
 ;
 
-
+paramRef
+:
+	ID
+;
 
 PARAM_DELIMITER
 :

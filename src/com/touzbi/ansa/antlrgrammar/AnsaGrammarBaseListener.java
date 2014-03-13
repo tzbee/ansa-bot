@@ -18,6 +18,24 @@ public class AnsaGrammarBaseListener implements AnsaGrammarListener {
 	 * The default implementation does nothing.
 	 */
 	@Override
+	public void enterParamRef(@NotNull AnsaGrammarParser.ParamRefContext ctx) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override
+	public void exitParamRef(@NotNull AnsaGrammarParser.ParamRefContext ctx) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override
 	public void enterCommandBlock(
 			@NotNull AnsaGrammarParser.CommandBlockContext ctx) {
 	}

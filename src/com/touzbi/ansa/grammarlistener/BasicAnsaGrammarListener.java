@@ -13,7 +13,7 @@ public class BasicAnsaGrammarListener extends AnsaGrammarBaseListener {
 	private CommandLoader commandLoader;
 
 	// Cuts the first and last character of a string
-	private StringFormatter edgeCutter = new EdgeCutterStringFormatter();
+	private StringFormatter removeQuotesformatter = new EdgeCutterStringFormatter();
 
 	// Command Builder
 	private CommandBuilder mainCommandBuilder;
@@ -25,11 +25,6 @@ public class BasicAnsaGrammarListener extends AnsaGrammarBaseListener {
 			CommandBuilder mainCommandBuilder) {
 		this.commandLoader = commandLoader;
 		this.mainCommandBuilder = mainCommandBuilder;
-	}
-
-	// Utility method to removes quotes
-	private String removeQuotes(String str) {
-		return this.edgeCutter.format(str);
 	}
 
 	/**
@@ -49,7 +44,8 @@ public class BasicAnsaGrammarListener extends AnsaGrammarBaseListener {
 	@Override
 	public void exitParamPair(ParamPairContext ctx) {
 		String paramName = ctx.paramName().getText();
-		String paramValue = removeQuotes(ctx.paramValue().getText());
+		String paramValue = this.removeQuotesformatter.format(ctx.paramValue()
+				.getText());
 
 		this.currentCommandBuilder.addParam(paramName, paramValue);
 	}
