@@ -1,7 +1,7 @@
 package com.touzbi.ansa.util.separator;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.Collection;
 import java.util.regex.Pattern;
 
 public class SplitDelimiterSeparator extends AbstractDelimiterSeparator {
@@ -10,7 +10,7 @@ public class SplitDelimiterSeparator extends AbstractDelimiterSeparator {
 	}
 
 	@Override
-	public List<String> separate(String str) {
+	public Collection<String> separate(String str) {
 		return Arrays.asList(Pattern.compile(this.delimiter).split(str));
 	}
 }

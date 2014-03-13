@@ -1,8 +1,8 @@
 package com.touzbi.ansa.util.separator;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Scanner;
 
 public class ScannerDelimiterSeparator extends AbstractDelimiterSeparator {
@@ -11,8 +11,8 @@ public class ScannerDelimiterSeparator extends AbstractDelimiterSeparator {
 	}
 
 	@Override
-	public List<String> separate(String str) {
-		List<String> resultList = new ArrayList<String>();
+	public Collection<String> separate(String str) {
+		Collection<String> resultList = new ArrayList<String>();
 
 		Scanner scanner = new Scanner(str);
 		scanner.useDelimiter(this.delimiter);

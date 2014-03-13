@@ -6,20 +6,20 @@ import java.util.Collection;
 
 public abstract class AbstractStringFilter implements StringFilter {
 	@Override
-	public Collection<String> filter(Collection<String> strCollection) {
-		Collection<String> results = new ArrayList<String>();
+	public Collection<String> filter(Collection<String> strings) {
+		Collection<String> filteredStrings = new ArrayList<String>();
 
-		for (String str : strCollection) {
+		for (String str : strings) {
 			if (isValidString(str)) {
-				results.add(str);
+				filteredStrings.add(str);
 			}
 		}
 
-		return results;
+		return filteredStrings;
 	}
 
 	@Override
-	public Collection<String> filter(String... str) {
-		return filter(Arrays.asList(str));
+	public Collection<String> filter(String... strings) {
+		return filter(Arrays.asList(strings));
 	}
 }
