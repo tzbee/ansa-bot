@@ -7,7 +7,7 @@ import com.touzbi.ansa.command.AbstractCommandBuilder;
 import com.touzbi.ansa.launcher.BasicLauncher;
 import com.touzbi.ansa.launcher.Launcher;
 
-public class DownloadCommandBuilder extends AbstractCommandBuilder {
+public class StartExternalAppCommandBuilder extends AbstractCommandBuilder {
 	private static final String BASE_COMMAND_PARAM = "command";
 
 	// Launcher strategy to use

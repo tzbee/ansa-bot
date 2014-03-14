@@ -2,12 +2,12 @@ package com.touzbi.ansatest.downloadtest;
 
 import org.junit.Test;
 
-import com.touzbi.ansa.command.download.DownloadCommandBuilder;
+import com.touzbi.ansa.command.download.StartExternalAppCommandBuilder;
 
 public class DownloadCommandBuilderTest {
 	@Test
 	public void test() {
-		DownloadCommandBuilder downloadCommandBuilder = new DownloadCommandBuilder();
+		StartExternalAppCommandBuilder downloadCommandBuilder = new StartExternalAppCommandBuilder();
 
 		downloadCommandBuilder.execute("https://www.google.com");
 	}

@@ -9,7 +9,6 @@ import org.apache.logging.log4j.Logger;
 import com.touzbi.ansa.command.CommandBuilder;
 import com.touzbi.ansa.commandfactory.AnsaFileCommandFactory;
 import com.touzbi.ansa.commandfactory.CommandFactory;
-import com.touzbi.ansa.commandfactory.DownloadCommandFactory;
 import com.touzbi.ansa.commandfactory.FilterCommandFactory;
 import com.touzbi.ansa.commandfactory.FormatStringCommandFactory;
 import com.touzbi.ansa.commandfactory.GetContentByRegexQueryFactory;
@@ -17,6 +16,7 @@ import com.touzbi.ansa.commandfactory.GetHTMLAttributeCommandFactory;
 import com.touzbi.ansa.commandfactory.GetHTMLElementTextContentFactory;
 import com.touzbi.ansa.commandfactory.HTTPRequestCommandFactory;
 import com.touzbi.ansa.commandfactory.PrintCommandFactory;
+import com.touzbi.ansa.commandfactory.StartExternalAppCommandFactory;
 
 /**
  * Singleton Command Loader
@@ -49,7 +49,7 @@ public class AnsaCommandLoader implements CommandLoader {
 				new GetHTMLAttributeCommandFactory());
 		this.commandMap.put("gethtmltext",
 				new GetHTMLElementTextContentFactory());
-		this.commandMap.put("download", new DownloadCommandFactory());
+		this.commandMap.put("start", new StartExternalAppCommandFactory());
 		this.commandMap.put("format", new FormatStringCommandFactory());
 		this.commandMap.put("filter", new FilterCommandFactory());
 	}

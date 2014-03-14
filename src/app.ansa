@@ -1,1 +1,1 @@
-download(command:'caja');
+start(command:'caja');
