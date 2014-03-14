@@ -1,4 +1,4 @@
-package com.touzbi.ansa.command.download;
+package com.touzbi.ansa.command.startexternalapp;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -13,18 +13,18 @@ public class StartExternalAppCommandBuilder extends AbstractCommandBuilder {
 	// Launcher strategy to use
 	private Launcher launcher = new BasicLauncher();
 
-	protected String getDownloadCommand() {
+	protected String getExternalAppCommand() {
 		return getParamValue(BASE_COMMAND_PARAM);
 	}
 
 	@Override
 	public Collection<String> execute(String input) {
-		this.launcher.launch(getDownloadCommand() + " " + input);
+		this.launcher.launch(getExternalAppCommand() + " " + input);
 		return Arrays.asList(input);
 	}
 
 	@Override
 	public String toString() {
-		return "Download with " + getDownloadCommand();
+		return "Download with " + getExternalAppCommand();
 	}
 }

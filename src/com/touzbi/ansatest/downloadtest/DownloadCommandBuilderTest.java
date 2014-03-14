@@ -2,7 +2,7 @@ package com.touzbi.ansatest.downloadtest;
 
 import org.junit.Test;
 
-import com.touzbi.ansa.command.download.StartExternalAppCommandBuilder;
+import com.touzbi.ansa.command.startexternalapp.StartExternalAppCommandBuilder;
 
 public class DownloadCommandBuilderTest {
 	@Test
