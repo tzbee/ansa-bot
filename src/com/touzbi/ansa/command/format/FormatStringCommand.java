@@ -10,11 +10,18 @@ public class FormatStringCommand extends AbstractCommandBuilder {
 	private static final String PREFIX_PARAM = "prefix";
 	private static final String SUFFIX_PARAM = "suffix";
 
+	protected String getPrefix() {
+		return getParamValue(PREFIX_PARAM);
+	}
+
+	protected String getSuffix() {
+		return getParamValue(SUFFIX_PARAM);
+	}
+
 	@Override
 	public Collection<String> execute(String input) {
-		return Arrays.asList(new CustomWrapperStringFormatter(
-				getParamValue(PREFIX_PARAM), getParamValue(SUFFIX_PARAM))
-				.format(input));
+		return Arrays.asList(new CustomWrapperStringFormatter(getPrefix(),
+				getSuffix()).format(input));
 	}
 
 	@Override

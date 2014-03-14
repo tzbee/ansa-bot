@@ -9,8 +9,11 @@ import java.util.Map;
 import com.touzbi.ansa.inputfactory.InputFactory;
 
 public abstract class AbstractCommandBuilder implements CommandBuilder {
+
+	// Command Parameters
 	private Map<String, String> params = new HashMap<String, String>();
 
+	// Children Commands
 	protected Collection<CommandBuilder> commandBuilders = new ArrayList<CommandBuilder>();
 
 	@Override
@@ -48,15 +51,20 @@ public abstract class AbstractCommandBuilder implements CommandBuilder {
 	}
 
 	@Override
-	public CommandBuilder addCommandBuilders(
-			Collection<CommandBuilder> commandBuilders) {
-		this.commandBuilders.addAll(commandBuilders);
+	public CommandBuilder addChildrenCommands(
+			Collection<CommandBuilder> commands) {
+		this.commandBuilders.addAll(commands);
 		return this;
 	}
 
 	@Override
-	public CommandBuilder addCommandBuilders(CommandBuilder... commandBuilders) {
-		return addCommandBuilders(Arrays.asList(commandBuilders));
+	public CommandBuilder addChildrenCommands(CommandBuilder... commands) {
+		return addChildrenCommands(Arrays.asList(commands));
+	}
+
+	@Override
+	public Collection<CommandBuilder> getChildrenCommands() {
+		return new ArrayList<CommandBuilder>(this.commandBuilders);
 	}
 
 	@Override

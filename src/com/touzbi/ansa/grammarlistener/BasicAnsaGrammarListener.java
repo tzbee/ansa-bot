@@ -58,6 +58,6 @@ public class BasicAnsaGrammarListener extends AnsaGrammarBaseListener {
 
 	@Override
 	public void exitCommandBlock(CommandBlockContext ctx) {
-		this.mainCommandBuilder.addCommandBuilders(this.currentCommandBuilder);
+		this.mainCommandBuilder.addChildrenCommands(this.currentCommandBuilder);
 	}
 }

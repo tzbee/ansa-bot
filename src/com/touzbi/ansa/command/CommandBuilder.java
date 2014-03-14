@@ -30,12 +30,14 @@ public interface CommandBuilder {
 	Collection<String> execute(InputFactory... inputFactories);
 
 	/**
-	 * Add a command builder
+	 * Add children commands to this command
 	 * 
 	 * @param commandBuilder
 	 */
 
-	CommandBuilder addCommandBuilders(Collection<CommandBuilder> commandBuilders);
+	CommandBuilder addChildrenCommands(Collection<CommandBuilder> commands);
 
-	CommandBuilder addCommandBuilders(CommandBuilder... commandBuilders);
+	CommandBuilder addChildrenCommands(CommandBuilder... commands);
+
+	Collection<CommandBuilder> getChildrenCommands();
 }

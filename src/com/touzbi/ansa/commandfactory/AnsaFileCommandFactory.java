@@ -8,7 +8,7 @@ import com.touzbi.ansa.util.fileutils.filecontentwrapper.BasicFileContentWrapper
 import com.touzbi.ansa.util.fileutils.filecontentwrapper.FileContentWrapper;
 
 public class AnsaFileCommandFactory implements CommandFactory {
-	private static final String SUFFIX = ".ansa";
+	private static final String FILE_EXTENSION = ".ansa";
 
 	private FileContentWrapper fileContentWrapper;
 	private CommandLoader commandLoader;
@@ -29,7 +29,7 @@ public class AnsaFileCommandFactory implements CommandFactory {
 		// Build the command from the file
 		new AnsaANTLRWrapper(this.commandLoader,
 				this.fileContentWrapper.getFileContent(this.commandName
-						+ SUFFIX), commandBuilder);
+						+ FILE_EXTENSION), commandBuilder);
 
 		return commandBuilder;
 	}
