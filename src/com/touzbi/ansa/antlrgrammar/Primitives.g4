@@ -19,7 +19,7 @@ SINGLE_QUOTE
 fragment
 LETTER
 :
-	[a-zA-Z-]
+	[a-zA-Z-_]
 ;
 
 fragment
