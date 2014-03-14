@@ -1,1 +1,2 @@
-app2(c:'firefox');
+app2(p:'firefox');
+print;
