@@ -3,22 +3,21 @@ package com.touzbi.ansa.command;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
 
-import com.touzbi.ansa.command.empty.EmptyCommand;
 import com.touzbi.ansa.inputfactory.InputFactory;
+import com.touzbi.ansa.parambuilder.BasicParamBuilder;
+import com.touzbi.ansa.parambuilder.ParamBuilder;
 
 public abstract class AbstractCommandBuilder implements CommandBuilder {
 
 	// Command Parameters
-	private Map<String, String> params = new HashMap<String, String>();
+	private ParamBuilder paramBuilder = new BasicParamBuilder();
 
 	// Children Commands
 	protected Collection<CommandBuilder> childrenCommands = new ArrayList<CommandBuilder>();
 
 	// Parent Command
-	private CommandBuilder parentCommand = new EmptyCommand();
+	private CommandBuilder parentCommand = null;
 
 	public AbstractCommandBuilder(CommandBuilder parentCommand) {
 		this.parentCommand = parentCommand;
@@ -29,14 +28,15 @@ public abstract class AbstractCommandBuilder implements CommandBuilder {
 
 	@Override
 	public CommandBuilder addParam(String paramName, String paramValue) {
-		this.params.put(paramName, paramValue);
+		this.paramBuilder.addParam(paramName, paramValue);
 		return this;
 	}
 
 	@Override
 	public String getParamValue(String paramName) {
-		return this.params.get(paramName) != null ? this.params.get(paramName)
-				: "";
+		String paramValue = this.paramBuilder.getParamValue(paramName);
+
+		return paramValue != null ? paramValue : "";
 	}
 
 	@Override
@@ -95,6 +95,7 @@ public abstract class AbstractCommandBuilder implements CommandBuilder {
 
 	@Override
 	public String toString() {
-		return this.childrenCommands.toString();
+		return "Params: " + this.paramBuilder + "\n" + "Children: "
+				+ this.childrenCommands;
 	}
 }
