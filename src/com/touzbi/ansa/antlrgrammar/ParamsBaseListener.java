@@ -18,6 +18,24 @@ public class ParamsBaseListener implements ParamsListener {
 	 * The default implementation does nothing.
 	 */
 	@Override
+	public void enterParamString(@NotNull ParamsParser.ParamStringContext ctx) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override
+	public void exitParamString(@NotNull ParamsParser.ParamStringContext ctx) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override
 	public void enterParamRef(@NotNull ParamsParser.ParamRefContext ctx) {
 	}
 

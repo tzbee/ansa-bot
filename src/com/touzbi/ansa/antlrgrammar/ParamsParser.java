@@ -26,9 +26,9 @@ public class ParamsParser extends Parser {
 			"'('", "':'", "QUOTED_STRING", "'''", "WS", "ID" };
 	public static final int RULE_paramBlock = 0, RULE_paramList = 1,
 			RULE_paramPair = 2, RULE_paramName = 3, RULE_paramValue = 4,
-			RULE_paramRef = 5;
+			RULE_paramString = 5, RULE_paramRef = 6;
 	public static final String[] ruleNames = { "paramBlock", "paramList",
-			"paramPair", "paramName", "paramValue", "paramRef" };
+			"paramPair", "paramName", "paramValue", "paramString", "paramRef" };
 
 	@Override
 	public String getGrammarFileName() {
@@ -89,11 +89,11 @@ public class ParamsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(12);
-				match(3);
-				setState(13);
-				paramList();
 				setState(14);
+				match(3);
+				setState(15);
+				paramList();
+				setState(16);
 				match(1);
 			}
 		} catch (RecognitionException re) {
@@ -144,21 +144,21 @@ public class ParamsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(16);
+				setState(18);
 				paramPair();
-				setState(21);
+				setState(23);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la == 2) {
 					{
 						{
-							setState(17);
+							setState(19);
 							match(2);
-							setState(18);
+							setState(20);
 							paramPair();
 						}
 					}
-					setState(23);
+					setState(25);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
@@ -214,11 +214,11 @@ public class ParamsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(24);
-				paramName();
-				setState(25);
-				match(PARAM_DELIMITER);
 				setState(26);
+				paramName();
+				setState(27);
+				match(PARAM_DELIMITER);
+				setState(28);
 				paramValue();
 			}
 		} catch (RecognitionException re) {
@@ -264,7 +264,7 @@ public class ParamsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(28);
+				setState(30);
 				match(ID);
 			}
 		} catch (RecognitionException re) {
@@ -278,8 +278,8 @@ public class ParamsParser extends Parser {
 	}
 
 	public static class ParamValueContext extends ParserRuleContext {
-		public TerminalNode QUOTED_STRING() {
-			return getToken(ParamsParser.QUOTED_STRING, 0);
+		public ParamStringContext paramString() {
+			return getRuleContext(ParamStringContext.class, 0);
 		}
 
 		public ParamRefContext paramRef() {
@@ -312,24 +312,70 @@ public class ParamsParser extends Parser {
 		ParamValueContext _localctx = new ParamValueContext(_ctx, getState());
 		enterRule(_localctx, 8, RULE_paramValue);
 		try {
-			setState(32);
+			setState(34);
 			switch (_input.LA(1)) {
 			case QUOTED_STRING:
 				enterOuterAlt(_localctx, 1);
 				{
-					setState(30);
-					match(QUOTED_STRING);
+					setState(32);
+					paramString();
 				}
 				break;
 			case ID:
 				enterOuterAlt(_localctx, 2);
 				{
-					setState(31);
+					setState(33);
 					paramRef();
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
+			}
+		} catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		} finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class ParamStringContext extends ParserRuleContext {
+		public TerminalNode QUOTED_STRING() {
+			return getToken(ParamsParser.QUOTED_STRING, 0);
+		}
+
+		public ParamStringContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+
+		@Override
+		public int getRuleIndex() {
+			return RULE_paramString;
+		}
+
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if (listener instanceof ParamsListener)
+				((ParamsListener) listener).enterParamString(this);
+		}
+
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if (listener instanceof ParamsListener)
+				((ParamsListener) listener).exitParamString(this);
+		}
+	}
+
+	public final ParamStringContext paramString() throws RecognitionException {
+		ParamStringContext _localctx = new ParamStringContext(_ctx, getState());
+		enterRule(_localctx, 10, RULE_paramString);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+				setState(36);
+				match(QUOTED_STRING);
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -370,11 +416,11 @@ public class ParamsParser extends Parser {
 
 	public final ParamRefContext paramRef() throws RecognitionException {
 		ParamRefContext _localctx = new ParamRefContext(_ctx, getState());
-		enterRule(_localctx, 10, RULE_paramRef);
+		enterRule(_localctx, 12, RULE_paramRef);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(34);
+				setState(38);
 				match(ID);
 			}
 		} catch (RecognitionException re) {
@@ -387,16 +433,17 @@ public class ParamsParser extends Parser {
 		return _localctx;
 	}
 
-	public static final String _serializedATN = "\3\uacf5\uee8c\u4f5d\u8b0d\u4a45\u78bd\u1b2f\u3378\3\n\'\4\2\t\2\4\3\t"
-			+ "\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\3\2\3\2\3\2\3\2\3\3\3\3\3\3\7\3\26"
-			+ "\n\3\f\3\16\3\31\13\3\3\4\3\4\3\4\3\4\3\5\3\5\3\6\3\6\5\6#\n\6\3\7\3\7"
-			+ "\3\7\2\b\2\4\6\b\n\f\2\2\"\2\16\3\2\2\2\4\22\3\2\2\2\6\32\3\2\2\2\b\36"
-			+ "\3\2\2\2\n\"\3\2\2\2\f$\3\2\2\2\16\17\7\5\2\2\17\20\5\4\3\2\20\21\7\3"
-			+ "\2\2\21\3\3\2\2\2\22\27\5\6\4\2\23\24\7\4\2\2\24\26\5\6\4\2\25\23\3\2"
-			+ "\2\2\26\31\3\2\2\2\27\25\3\2\2\2\27\30\3\2\2\2\30\5\3\2\2\2\31\27\3\2"
-			+ "\2\2\32\33\5\b\5\2\33\34\7\6\2\2\34\35\5\n\6\2\35\7\3\2\2\2\36\37\7\n"
-			+ "\2\2\37\t\3\2\2\2 #\7\7\2\2!#\5\f\7\2\" \3\2\2\2\"!\3\2\2\2#\13\3\2\2"
-			+ "\2$%\7\n\2\2%\r\3\2\2\2\4\27\"";
+	public static final String _serializedATN = "\3\uacf5\uee8c\u4f5d\u8b0d\u4a45\u78bd\u1b2f\u3378\3\n+\4\2\t\2\4\3\t"
+			+ "\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\3\2\3\2\3\2\3\2\3\3\3\3\3\3"
+			+ "\7\3\30\n\3\f\3\16\3\33\13\3\3\4\3\4\3\4\3\4\3\5\3\5\3\6\3\6\5\6%\n\6"
+			+ "\3\7\3\7\3\b\3\b\3\b\2\t\2\4\6\b\n\f\16\2\2%\2\20\3\2\2\2\4\24\3\2\2\2"
+			+ "\6\34\3\2\2\2\b \3\2\2\2\n$\3\2\2\2\f&\3\2\2\2\16(\3\2\2\2\20\21\7\5\2"
+			+ "\2\21\22\5\4\3\2\22\23\7\3\2\2\23\3\3\2\2\2\24\31\5\6\4\2\25\26\7\4\2"
+			+ "\2\26\30\5\6\4\2\27\25\3\2\2\2\30\33\3\2\2\2\31\27\3\2\2\2\31\32\3\2\2"
+			+ "\2\32\5\3\2\2\2\33\31\3\2\2\2\34\35\5\b\5\2\35\36\7\6\2\2\36\37\5\n\6"
+			+ "\2\37\7\3\2\2\2 !\7\n\2\2!\t\3\2\2\2\"%\5\f\7\2#%\5\16\b\2$\"\3\2\2\2"
+			+ "$#\3\2\2\2%\13\3\2\2\2&\'\7\7\2\2\'\r\3\2\2\2()\7\n\2\2)\17\3\2\2\2\4"
+			+ "\31$";
 	public static final ATN _ATN = ATNSimulator.deserialize(_serializedATN
 			.toCharArray());
 	static {

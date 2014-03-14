@@ -5,8 +5,9 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import com.touzbi.ansa.inputfactory.InputFactory;
-import com.touzbi.ansa.parambuilder.BasicParamBuilder;
-import com.touzbi.ansa.parambuilder.ParamBuilder;
+import com.touzbi.ansa.param.parambuilder.BasicParamBuilder;
+import com.touzbi.ansa.param.parambuilder.ParamBuilder;
+import com.touzbi.ansa.param.paramfactory.ParamFactory;
 
 public abstract class AbstractCommandBuilder implements CommandBuilder {
 
@@ -26,9 +27,19 @@ public abstract class AbstractCommandBuilder implements CommandBuilder {
 	public AbstractCommandBuilder() {
 	}
 
+	/**
+	 * Parameters
+	 */
+
 	@Override
 	public CommandBuilder addParam(String paramName, String paramValue) {
 		this.paramBuilder.addParam(paramName, paramValue);
+		return this;
+	}
+
+	@Override
+	public CommandBuilder addParam(String paramName, ParamFactory paramFactory) {
+		this.paramBuilder.addParam(paramName, paramFactory);
 		return this;
 	}
 
@@ -38,6 +49,10 @@ public abstract class AbstractCommandBuilder implements CommandBuilder {
 
 		return paramValue != null ? paramValue : "";
 	}
+
+	/**
+	 * Execute command
+	 */
 
 	@Override
 	public Collection<String> execute(InputFactory... inputFactories) {
@@ -61,6 +76,9 @@ public abstract class AbstractCommandBuilder implements CommandBuilder {
 		return outputs;
 	}
 
+	/**
+	 * Children / Parent structure
+	 */
 	@Override
 	public CommandBuilder addChildrenCommands(
 			Collection<CommandBuilder> commands) {

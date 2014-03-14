@@ -3,6 +3,7 @@ package com.touzbi.ansa.command;
 import java.util.Collection;
 
 import com.touzbi.ansa.inputfactory.InputFactory;
+import com.touzbi.ansa.param.paramfactory.ParamFactory;
 
 public interface CommandBuilder {
 
@@ -14,6 +15,8 @@ public interface CommandBuilder {
 	 */
 
 	CommandBuilder addParam(String paramName, String paramValue);
+
+	CommandBuilder addParam(String paramName, ParamFactory paramFactory);
 
 	String getParamValue(String paramName);
 
@@ -45,4 +48,5 @@ public interface CommandBuilder {
 	CommandBuilder getParentCommand();
 
 	void setParentCommand(CommandBuilder parentCommand);
+
 }

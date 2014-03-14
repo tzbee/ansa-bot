@@ -29,10 +29,10 @@ public class AnsaGrammarParser extends Parser {
 	public static final int RULE_init = 0, RULE_commandBlock = 1,
 			RULE_commandId = 2, RULE_paramBlock = 3, RULE_paramList = 4,
 			RULE_paramPair = 5, RULE_paramName = 6, RULE_paramValue = 7,
-			RULE_paramRef = 8;
+			RULE_paramString = 8, RULE_paramRef = 9;
 	public static final String[] ruleNames = { "init", "commandBlock",
 			"commandId", "paramBlock", "paramList", "paramPair", "paramName",
-			"paramValue", "paramRef" };
+			"paramValue", "paramString", "paramRef" };
 
 	@Override
 	public String getGrammarFileName() {
@@ -98,19 +98,19 @@ public class AnsaGrammarParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(23);
+				setState(25);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la == ID) {
 					{
 						{
-							setState(18);
+							setState(20);
 							commandBlock();
-							setState(19);
+							setState(21);
 							match(4);
 						}
 					}
-					setState(25);
+					setState(27);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
@@ -168,19 +168,19 @@ public class AnsaGrammarParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(26);
+				setState(28);
 				commandId();
-				setState(30);
+				setState(32);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la == 3) {
 					{
 						{
-							setState(27);
+							setState(29);
 							paramBlock();
 						}
 					}
-					setState(32);
+					setState(34);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
@@ -228,7 +228,7 @@ public class AnsaGrammarParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(33);
+				setState(35);
 				match(ID);
 			}
 		} catch (RecognitionException re) {
@@ -274,11 +274,11 @@ public class AnsaGrammarParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(35);
-				match(3);
-				setState(36);
-				paramList();
 				setState(37);
+				match(3);
+				setState(38);
+				paramList();
+				setState(39);
 				match(1);
 			}
 		} catch (RecognitionException re) {
@@ -329,21 +329,21 @@ public class AnsaGrammarParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(39);
+				setState(41);
 				paramPair();
-				setState(44);
+				setState(46);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la == 2) {
 					{
 						{
-							setState(40);
+							setState(42);
 							match(2);
-							setState(41);
+							setState(43);
 							paramPair();
 						}
 					}
-					setState(46);
+					setState(48);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
@@ -399,11 +399,11 @@ public class AnsaGrammarParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(47);
-				paramName();
-				setState(48);
-				match(PARAM_DELIMITER);
 				setState(49);
+				paramName();
+				setState(50);
+				match(PARAM_DELIMITER);
+				setState(51);
 				paramValue();
 			}
 		} catch (RecognitionException re) {
@@ -449,7 +449,7 @@ public class AnsaGrammarParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(51);
+				setState(53);
 				match(ID);
 			}
 		} catch (RecognitionException re) {
@@ -463,8 +463,8 @@ public class AnsaGrammarParser extends Parser {
 	}
 
 	public static class ParamValueContext extends ParserRuleContext {
-		public TerminalNode QUOTED_STRING() {
-			return getToken(AnsaGrammarParser.QUOTED_STRING, 0);
+		public ParamStringContext paramString() {
+			return getRuleContext(ParamStringContext.class, 0);
 		}
 
 		public ParamRefContext paramRef() {
@@ -497,24 +497,70 @@ public class AnsaGrammarParser extends Parser {
 		ParamValueContext _localctx = new ParamValueContext(_ctx, getState());
 		enterRule(_localctx, 14, RULE_paramValue);
 		try {
-			setState(55);
+			setState(57);
 			switch (_input.LA(1)) {
 			case QUOTED_STRING:
 				enterOuterAlt(_localctx, 1);
 				{
-					setState(53);
-					match(QUOTED_STRING);
+					setState(55);
+					paramString();
 				}
 				break;
 			case ID:
 				enterOuterAlt(_localctx, 2);
 				{
-					setState(54);
+					setState(56);
 					paramRef();
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
+			}
+		} catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		} finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class ParamStringContext extends ParserRuleContext {
+		public TerminalNode QUOTED_STRING() {
+			return getToken(AnsaGrammarParser.QUOTED_STRING, 0);
+		}
+
+		public ParamStringContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+
+		@Override
+		public int getRuleIndex() {
+			return RULE_paramString;
+		}
+
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if (listener instanceof AnsaGrammarListener)
+				((AnsaGrammarListener) listener).enterParamString(this);
+		}
+
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if (listener instanceof AnsaGrammarListener)
+				((AnsaGrammarListener) listener).exitParamString(this);
+		}
+	}
+
+	public final ParamStringContext paramString() throws RecognitionException {
+		ParamStringContext _localctx = new ParamStringContext(_ctx, getState());
+		enterRule(_localctx, 16, RULE_paramString);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+				setState(59);
+				match(QUOTED_STRING);
 			}
 		} catch (RecognitionException re) {
 			_localctx.exception = re;
@@ -555,11 +601,11 @@ public class AnsaGrammarParser extends Parser {
 
 	public final ParamRefContext paramRef() throws RecognitionException {
 		ParamRefContext _localctx = new ParamRefContext(_ctx, getState());
-		enterRule(_localctx, 16, RULE_paramRef);
+		enterRule(_localctx, 18, RULE_paramRef);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-				setState(57);
+				setState(61);
 				match(ID);
 			}
 		} catch (RecognitionException re) {
@@ -572,21 +618,22 @@ public class AnsaGrammarParser extends Parser {
 		return _localctx;
 	}
 
-	public static final String _serializedATN = "\3\uacf5\uee8c\u4f5d\u8b0d\u4a45\u78bd\u1b2f\u3378\3\f>\4\2\t\2\4\3\t"
-			+ "\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\3\2\3\2\3\2"
-			+ "\7\2\30\n\2\f\2\16\2\33\13\2\3\3\3\3\7\3\37\n\3\f\3\16\3\"\13\3\3\4\3"
-			+ "\4\3\5\3\5\3\5\3\5\3\6\3\6\3\6\7\6-\n\6\f\6\16\6\60\13\6\3\7\3\7\3\7\3"
-			+ "\7\3\b\3\b\3\t\3\t\5\t:\n\t\3\n\3\n\3\n\2\13\2\4\6\b\n\f\16\20\22\2\2"
-			+ "8\2\31\3\2\2\2\4\34\3\2\2\2\6#\3\2\2\2\b%\3\2\2\2\n)\3\2\2\2\f\61\3\2"
-			+ "\2\2\16\65\3\2\2\2\209\3\2\2\2\22;\3\2\2\2\24\25\5\4\3\2\25\26\7\6\2\2"
-			+ "\26\30\3\2\2\2\27\24\3\2\2\2\30\33\3\2\2\2\31\27\3\2\2\2\31\32\3\2\2\2"
-			+ "\32\3\3\2\2\2\33\31\3\2\2\2\34 \5\6\4\2\35\37\5\b\5\2\36\35\3\2\2\2\37"
-			+ "\"\3\2\2\2 \36\3\2\2\2 !\3\2\2\2!\5\3\2\2\2\" \3\2\2\2#$\7\f\2\2$\7\3"
-			+ "\2\2\2%&\7\5\2\2&\'\5\n\6\2\'(\7\3\2\2(\t\3\2\2\2).\5\f\7\2*+\7\4\2\2"
-			+ "+-\5\f\7\2,*\3\2\2\2-\60\3\2\2\2.,\3\2\2\2./\3\2\2\2/\13\3\2\2\2\60.\3"
-			+ "\2\2\2\61\62\5\16\b\2\62\63\7\b\2\2\63\64\5\20\t\2\64\r\3\2\2\2\65\66"
-			+ "\7\f\2\2\66\17\3\2\2\2\67:\7\t\2\28:\5\22\n\29\67\3\2\2\298\3\2\2\2:\21"
-			+ "\3\2\2\2;<\7\f\2\2<\23\3\2\2\2\6\31 .9";
+	public static final String _serializedATN = "\3\uacf5\uee8c\u4f5d\u8b0d\u4a45\u78bd\u1b2f\u3378\3\fB\4\2\t\2\4\3\t"
+			+ "\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\3"
+			+ "\2\3\2\3\2\7\2\32\n\2\f\2\16\2\35\13\2\3\3\3\3\7\3!\n\3\f\3\16\3$\13\3"
+			+ "\3\4\3\4\3\5\3\5\3\5\3\5\3\6\3\6\3\6\7\6/\n\6\f\6\16\6\62\13\6\3\7\3\7"
+			+ "\3\7\3\7\3\b\3\b\3\t\3\t\5\t<\n\t\3\n\3\n\3\13\3\13\3\13\2\f\2\4\6\b\n"
+			+ "\f\16\20\22\24\2\2;\2\33\3\2\2\2\4\36\3\2\2\2\6%\3\2\2\2\b\'\3\2\2\2\n"
+			+ "+\3\2\2\2\f\63\3\2\2\2\16\67\3\2\2\2\20;\3\2\2\2\22=\3\2\2\2\24?\3\2\2"
+			+ "\2\26\27\5\4\3\2\27\30\7\6\2\2\30\32\3\2\2\2\31\26\3\2\2\2\32\35\3\2\2"
+			+ "\2\33\31\3\2\2\2\33\34\3\2\2\2\34\3\3\2\2\2\35\33\3\2\2\2\36\"\5\6\4\2"
+			+ "\37!\5\b\5\2 \37\3\2\2\2!$\3\2\2\2\" \3\2\2\2\"#\3\2\2\2#\5\3\2\2\2$\""
+			+ "\3\2\2\2%&\7\f\2\2&\7\3\2\2\2\'(\7\5\2\2()\5\n\6\2)*\7\3\2\2*\t\3\2\2"
+			+ "\2+\60\5\f\7\2,-\7\4\2\2-/\5\f\7\2.,\3\2\2\2/\62\3\2\2\2\60.\3\2\2\2\60"
+			+ "\61\3\2\2\2\61\13\3\2\2\2\62\60\3\2\2\2\63\64\5\16\b\2\64\65\7\b\2\2\65"
+			+ "\66\5\20\t\2\66\r\3\2\2\2\678\7\f\2\28\17\3\2\2\29<\5\22\n\2:<\5\24\13"
+			+ "\2;9\3\2\2\2;:\3\2\2\2<\21\3\2\2\2=>\7\t\2\2>\23\3\2\2\2?@\7\f\2\2@\25"
+			+ "\3\2\2\2\6\33\"\60;";
 	public static final ATN _ATN = ATNSimulator.deserialize(_serializedATN
 			.toCharArray());
 	static {

@@ -10,6 +10,22 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface AnsaGrammarListener extends ParseTreeListener {
 	/**
+	 * Enter a parse tree produced by {@link AnsaGrammarParser#paramString}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void enterParamString(@NotNull AnsaGrammarParser.ParamStringContext ctx);
+
+	/**
+	 * Exit a parse tree produced by {@link AnsaGrammarParser#paramString}.
+	 * 
+	 * @param ctx
+	 *            the parse tree
+	 */
+	void exitParamString(@NotNull AnsaGrammarParser.ParamStringContext ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link AnsaGrammarParser#paramRef}.
 	 * 
 	 * @param ctx

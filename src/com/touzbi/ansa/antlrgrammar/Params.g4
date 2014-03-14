@@ -27,8 +27,13 @@ paramName
 
 paramValue
 :
-	QUOTED_STRING
+	paramString
 	| paramRef
+;
+
+paramString
+:
+	QUOTED_STRING
 ;
 
 paramRef
