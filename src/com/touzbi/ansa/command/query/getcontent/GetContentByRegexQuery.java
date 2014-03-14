@@ -5,21 +5,30 @@ import java.util.Collection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.touzbi.ansa.command.query.QueryCommandBuilder;
 
 public class GetContentByRegexQuery extends QueryCommandBuilder {
+	private static final Logger LOGGER = LogManager.getLogger();
 
 	@Override
 	public Collection<String> execute(String input) {
-		Collection<String> results = new ArrayList<String>();
+		LOGGER.info("Getting content using regex: {}", getQueryParam());
+
+		Collection<String> queryResults = new ArrayList<String>();
 
 		Matcher matcher = Pattern.compile(getQueryParam()).matcher(input);
 
 		while (matcher.find()) {
-			results.add(matcher.group());
+			queryResults.add(matcher.group());
 		}
 
-		return results;
+		LOGGER.info(!queryResults.isEmpty() ? "Content found"
+				: "No content found");
+
+		return queryResults;
 	}
 
 	@Override
