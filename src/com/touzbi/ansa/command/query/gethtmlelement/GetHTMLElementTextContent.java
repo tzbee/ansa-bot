@@ -1,4 +1,4 @@
-package com.touzbi.ansa.command.gethtmlelement;
+package com.touzbi.ansa.command.query.gethtmlelement;
 
 import com.touzbi.ansa.htmlelement.htmlelementwrapper.HTMLElementWrapper;
 

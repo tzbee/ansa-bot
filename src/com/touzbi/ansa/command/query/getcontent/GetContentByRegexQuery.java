@@ -1,11 +1,11 @@
-package com.touzbi.ansa.command.getcontent;
+package com.touzbi.ansa.command.query.getcontent;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.touzbi.ansa.command.QueryCommandBuilder;
+import com.touzbi.ansa.command.query.QueryCommandBuilder;
 
 public class GetContentByRegexQuery extends QueryCommandBuilder {
 

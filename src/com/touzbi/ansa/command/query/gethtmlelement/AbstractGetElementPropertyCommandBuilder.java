@@ -1,9 +1,9 @@
-package com.touzbi.ansa.command.gethtmlelement;
+package com.touzbi.ansa.command.query.gethtmlelement;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
-import com.touzbi.ansa.command.QueryCommandBuilder;
+import com.touzbi.ansa.command.query.QueryCommandBuilder;
 import com.touzbi.ansa.htmlelement.htmlelementselector.HTMLElementSelector;
 import com.touzbi.ansa.htmlelement.htmlelementselector.JSoupHTMLElementSelector;
 import com.touzbi.ansa.htmlelement.htmlelementwrapper.HTMLElementWrapper;

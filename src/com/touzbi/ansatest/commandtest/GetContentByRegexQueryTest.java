@@ -3,7 +3,7 @@ package com.touzbi.ansatest.commandtest;
 import org.junit.Test;
 
 import com.touzbi.ansa.command.CommandBuilder;
-import com.touzbi.ansa.command.getcontent.GetContentByRegexQuery;
+import com.touzbi.ansa.command.query.getcontent.GetContentByRegexQuery;
 
 public class GetContentByRegexQueryTest {
 

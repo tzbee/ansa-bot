@@ -4,6 +4,7 @@ import com.touzbi.ansa.antlrgrammar.AnsaGrammarBaseListener;
 import com.touzbi.ansa.antlrgrammar.AnsaGrammarParser.CommandBlockContext;
 import com.touzbi.ansa.antlrgrammar.AnsaGrammarParser.CommandIdContext;
 import com.touzbi.ansa.antlrgrammar.AnsaGrammarParser.ParamPairContext;
+import com.touzbi.ansa.antlrgrammar.AnsaGrammarParser.ParamRefContext;
 import com.touzbi.ansa.command.CommandBuilder;
 import com.touzbi.ansa.commandloader.CommandLoader;
 import com.touzbi.ansa.util.stringformatter.EdgeCutterStringFormatter;
@@ -35,6 +36,11 @@ public class BasicAnsaGrammarListener extends AnsaGrammarBaseListener {
 	public void exitCommandId(CommandIdContext ctx) {
 		this.currentCommandBuilder = this.commandLoader.getCommandByName(ctx
 				.getText());
+	}
+
+	@Override
+	public void exitParamRef(ParamRefContext ctx) {
+		// TODO
 	}
 
 	/**
