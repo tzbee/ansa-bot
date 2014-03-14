@@ -12,7 +12,7 @@ public class CompositeCommandBuilder extends AbstractCommandBuilder {
 	public Collection<String> execute(String input) {
 		Collection<String> inputs = Arrays.asList(input);
 
-		for (CommandBuilder commandBuilder : this.commandBuilders) {
+		for (CommandBuilder commandBuilder : this.childrenCommands) {
 			inputs = commandBuilder.execute(inputs);
 		}
 

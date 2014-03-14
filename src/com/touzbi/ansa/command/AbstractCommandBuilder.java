@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.touzbi.ansa.command.empty.EmptyCommand;
 import com.touzbi.ansa.inputfactory.InputFactory;
 
 public abstract class AbstractCommandBuilder implements CommandBuilder {
@@ -14,7 +15,17 @@ public abstract class AbstractCommandBuilder implements CommandBuilder {
 	private Map<String, String> params = new HashMap<String, String>();
 
 	// Children Commands
-	protected Collection<CommandBuilder> commandBuilders = new ArrayList<CommandBuilder>();
+	protected Collection<CommandBuilder> childrenCommands = new ArrayList<CommandBuilder>();
+
+	// Parent Command
+	private CommandBuilder parentCommand = new EmptyCommand();
+
+	public AbstractCommandBuilder(CommandBuilder parentCommand) {
+		this.parentCommand = parentCommand;
+	}
+
+	public AbstractCommandBuilder() {
+	}
 
 	@Override
 	public CommandBuilder addParam(String paramName, String paramValue) {
@@ -53,7 +64,12 @@ public abstract class AbstractCommandBuilder implements CommandBuilder {
 	@Override
 	public CommandBuilder addChildrenCommands(
 			Collection<CommandBuilder> commands) {
-		this.commandBuilders.addAll(commands);
+
+		for (CommandBuilder command : commands) {
+			command.setParentCommand(this);
+			this.childrenCommands.add(command);
+		}
+
 		return this;
 	}
 
@@ -64,11 +80,21 @@ public abstract class AbstractCommandBuilder implements CommandBuilder {
 
 	@Override
 	public Collection<CommandBuilder> getChildrenCommands() {
-		return new ArrayList<CommandBuilder>(this.commandBuilders);
+		return new ArrayList<CommandBuilder>(this.childrenCommands);
+	}
+
+	@Override
+	public void setParentCommand(CommandBuilder parentCommand) {
+		this.parentCommand = parentCommand;
+	}
+
+	@Override
+	public CommandBuilder getParentCommand() {
+		return this.parentCommand;
 	}
 
 	@Override
 	public String toString() {
-		return this.commandBuilders.toString();
+		return this.childrenCommands.toString();
 	}
 }

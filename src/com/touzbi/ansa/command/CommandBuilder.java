@@ -5,6 +5,7 @@ import java.util.Collection;
 import com.touzbi.ansa.inputfactory.InputFactory;
 
 public interface CommandBuilder {
+
 	/**
 	 * Parameters handling
 	 * 
@@ -30,7 +31,7 @@ public interface CommandBuilder {
 	Collection<String> execute(InputFactory... inputFactories);
 
 	/**
-	 * Add children commands to this command
+	 * Command Structure
 	 * 
 	 * @param commandBuilder
 	 */
@@ -40,4 +41,8 @@ public interface CommandBuilder {
 	CommandBuilder addChildrenCommands(CommandBuilder... commands);
 
 	Collection<CommandBuilder> getChildrenCommands();
+
+	CommandBuilder getParentCommand();
+
+	void setParentCommand(CommandBuilder parentCommand);
 }
