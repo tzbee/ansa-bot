@@ -3,13 +3,13 @@ package com.touzbi.ansatest.stringformattertest;
 import org.junit.Test;
 
 import com.touzbi.ansa.util.stringformatter.CustomWrapperStringFormatter;
-import com.touzbi.ansa.util.stringformatter.ReplacingFormatter;
+import com.touzbi.ansa.util.stringformatter.ReplaceStringFormatter;
 import com.touzbi.ansa.util.stringformatter.StringFormatter;
 import com.touzbi.ansa.util.stringformatter.StringFormatterComposite;
 
 public class StringFormatterCompositeTest {
 	private static final StringFormatter[] FORMATTERS = {
-			new ReplacingFormatter(" ", "+"),
+			new ReplaceStringFormatter(" ", "+"),
 			new CustomWrapperStringFormatter("HAHA", "LOL") };
 
 	private static final String INPUT = "Hello World !!";

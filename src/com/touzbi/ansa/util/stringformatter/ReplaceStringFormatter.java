@@ -1,10 +1,10 @@
 package com.touzbi.ansa.util.stringformatter;
 
-public class ReplacingFormatter implements StringFormatter {
+public class ReplaceStringFormatter implements StringFormatter {
 	private String newStr;
 	private String oldStr;
 
-	public ReplacingFormatter(String oldStr, String newStr) {
+	public ReplaceStringFormatter(String oldStr, String newStr) {
 		this.oldStr = oldStr;
 		this.newStr = newStr;
 	}
