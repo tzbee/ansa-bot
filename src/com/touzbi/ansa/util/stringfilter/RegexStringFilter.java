@@ -5,8 +5,13 @@ import java.util.regex.Pattern;
 public class RegexStringFilter extends AbstractStringFilter {
 	private String regex;
 
-	public RegexStringFilter(String regex) {
+	public RegexStringFilter(String regex, boolean keepValid) {
+		super(keepValid);
 		this.regex = regex;
+	}
+
+	public RegexStringFilter(String regex) {
+		this(regex, true);
 	}
 
 	@Override
