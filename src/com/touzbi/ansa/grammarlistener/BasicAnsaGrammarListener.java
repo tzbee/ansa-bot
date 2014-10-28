@@ -7,9 +7,6 @@ import com.touzbi.ansa.antlrgrammar.AnsaGrammarParser.ParamRefContext;
 import com.touzbi.ansa.antlrgrammar.AnsaGrammarParser.ParamStringContext;
 import com.touzbi.ansa.command.CommandBuilder;
 import com.touzbi.ansa.commandloader.CommandLoader;
-import com.touzbi.ansa.param.paramfactory.BasicParamFactory;
-import com.touzbi.ansa.param.paramfactory.ParamFactory;
-import com.touzbi.ansa.param.paramfactory.ReferencedParamFactory;
 import com.touzbi.ansa.util.stringformatter.EdgeCutterStringFormatter;
 import com.touzbi.ansa.util.stringformatter.StringFormatter;
 

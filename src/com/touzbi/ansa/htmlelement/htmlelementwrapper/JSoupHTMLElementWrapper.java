@@ -3,8 +3,6 @@ package com.touzbi.ansa.htmlelement.htmlelementwrapper;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import org.jsoup.nodes.Element;
-
 public class JSoupHTMLElementWrapper implements HTMLElementWrapper {
 	private Element element;
 

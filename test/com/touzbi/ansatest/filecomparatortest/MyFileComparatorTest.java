@@ -2,8 +2,6 @@ package com.touzbi.ansatest.filecomparatortest;
 
 import java.io.File;
 
-import org.junit.Test;
-
 import com.touzbi.ansa.util.fileutils.filecomparator.FileComparator;
 import com.touzbi.ansa.util.fileutils.filecomparator.MyFileComparator;
 

@@ -4,7 +4,6 @@ package com.touzbi.ansa.antlrgrammar;
 import java.util.List;
 
 import org.antlr.v4.runtime.NoViableAltException;
-import org.antlr.v4.runtime.Parser;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.TokenStream;

@@ -3,9 +3,7 @@ package com.touzbi.ansa.util.fileutils.filereaderstrategy;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
 
 public abstract class AbstractFileReaderStrategy implements FileReaderStrategy {
 	private static final Logger LOGGER = LogManager.getLogger();

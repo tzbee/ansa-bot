@@ -1,7 +1,6 @@
 package com.touzbi.ansa.util.stringformatter;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
 
 public class CustomWrapperStringFormatter implements StringFormatter {
 	private static final Logger LOGGER = LogManager.getLogger();

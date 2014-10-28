@@ -2,9 +2,7 @@ package com.touzbi.ansa.util.fileutils.filereaderstrategy;
 
 import java.io.IOException;
 import java.io.InputStream;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
 
 /*
  * File reader implementation using class loader

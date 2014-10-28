@@ -3,7 +3,6 @@ package com.touzbi.ansa.command;
 import java.util.Collection;
 
 import com.touzbi.ansa.inputfactory.InputFactory;
-import com.touzbi.ansa.param.paramfactory.ParamFactory;
 
 public interface CommandBuilder {
 

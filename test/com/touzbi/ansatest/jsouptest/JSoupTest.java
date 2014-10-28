@@ -1,8 +1,7 @@
 package com.touzbi.ansatest.jsouptest;
 
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.junit.Test;
+
 
 public class JSoupTest {
 	@Test

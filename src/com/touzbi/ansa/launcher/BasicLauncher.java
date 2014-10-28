@@ -1,9 +1,7 @@
 package com.touzbi.ansa.launcher;
 
 import java.io.IOException;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
 
 public class BasicLauncher implements Launcher {
 	private static final Logger LOGGER = LogManager.getLogger();

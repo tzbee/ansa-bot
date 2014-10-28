@@ -1,7 +1,5 @@
 package com.touzbi.ansatest.stringformattertest;
 
-import org.junit.Test;
-
 import com.touzbi.ansa.util.stringformatter.EdgeCutterStringFormatter;
 import com.touzbi.ansa.util.stringformatter.StringFormatter;
 

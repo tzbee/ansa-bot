@@ -1,8 +1,9 @@
 // Generated from AnsaGrammar.g4 by ANTLR 4.1
 package com.touzbi.ansa.antlrgrammar;
 
-import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
+
+import com.sun.istack.internal.NotNull;
 
 /**
  * This interface defines a complete listener for a parse tree produced by

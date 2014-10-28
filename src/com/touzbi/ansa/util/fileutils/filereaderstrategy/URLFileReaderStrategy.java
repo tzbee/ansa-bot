@@ -5,10 +5,8 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.logging.LogManager;
 import java.util.zip.GZIPInputStream;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 //Read a distant file based on its URL
 //TODO Refactor the whole thing

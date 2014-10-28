@@ -2,21 +2,11 @@ package com.touzbi.ansa.commandloader;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
 
 import com.touzbi.ansa.command.CommandBuilder;
 import com.touzbi.ansa.commandfactory.AnsaFileCommandFactory;
 import com.touzbi.ansa.commandfactory.CommandFactory;
-import com.touzbi.ansa.commandfactory.FilterCommandFactory;
-import com.touzbi.ansa.commandfactory.FormatStringCommandFactory;
-import com.touzbi.ansa.commandfactory.GetContentByRegexQueryFactory;
-import com.touzbi.ansa.commandfactory.GetHTMLAttributeCommandFactory;
-import com.touzbi.ansa.commandfactory.GetHTMLElementTextContentFactory;
-import com.touzbi.ansa.commandfactory.HTTPRequestCommandFactory;
-import com.touzbi.ansa.commandfactory.PrintCommandFactory;
-import com.touzbi.ansa.commandfactory.StartExternalAppCommandFactory;
 
 /**
  * Singleton Command Loader

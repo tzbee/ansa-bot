@@ -1,7 +1,6 @@
 package com.touzbi.ansa.util.fileutils.filecontentwrapper;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
 
 import com.touzbi.ansa.util.fileutils.filereaderstrategy.ClassPathRelativeFileReaderStrategy;
 import com.touzbi.ansa.util.fileutils.filereaderstrategy.FileReaderStrategy;

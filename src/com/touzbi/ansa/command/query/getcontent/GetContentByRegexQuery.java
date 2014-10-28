@@ -2,13 +2,9 @@ package com.touzbi.ansa.command.query.getcontent;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.logging.LogManager;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import com.touzbi.ansa.command.query.QueryCommandBuilder;
 
 public class GetContentByRegexQuery extends QueryCommandBuilder {
 	private static final Logger LOGGER = LogManager.getLogger();

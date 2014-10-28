@@ -1,7 +1,5 @@
 package com.touzbi.ansatest.maintest;
 
-import org.junit.Test;
-
 import com.touzbi.ansa.command.CommandBuilder;
 import com.touzbi.ansa.commandloader.AnsaCommandLoader;
 import com.touzbi.ansa.commandloader.CommandLoader;

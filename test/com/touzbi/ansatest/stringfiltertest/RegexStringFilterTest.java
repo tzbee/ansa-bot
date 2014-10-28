@@ -3,8 +3,6 @@ package com.touzbi.ansatest.stringfiltertest;
 import java.util.Arrays;
 import java.util.Collection;
 
-import org.junit.Test;
-
 import com.touzbi.ansa.util.stringfilter.RegexStringFilter;
 import com.touzbi.ansa.util.stringfilter.StringFilter;
 

@@ -1,7 +1,5 @@
 package com.touzbi.ansatest.antlrwrappertest;
 
-import org.junit.Test;
-
 import com.touzbi.ansa.antlrwrapper.AbstractANTLRWrapper;
 import com.touzbi.ansa.antlrwrapper.AnsaANTLRWrapper;
 import com.touzbi.ansa.command.composite.CompositeCommandBuilder;

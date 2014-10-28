@@ -1,7 +1,5 @@
 package com.touzbi.ansatest.commandtest;
 
-import org.junit.Test;
-
 import com.touzbi.ansa.command.CommandBuilder;
 import com.touzbi.ansa.command.query.gethtmlelement.GetHTMLElementTextContent;
 

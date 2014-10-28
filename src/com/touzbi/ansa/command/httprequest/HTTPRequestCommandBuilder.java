@@ -2,9 +2,7 @@ package com.touzbi.ansa.command.httprequest;
 
 import java.util.Arrays;
 import java.util.Collection;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.LogManager;
 
 import com.touzbi.ansa.command.AbstractCommandBuilder;
 import com.touzbi.ansa.util.fileutils.filereaderstrategy.FileReaderStrategy;
