@@ -2,7 +2,7 @@
 
 <Configuration status="WARN">
 	<Properties>
-		<Property name="externalFileName">/home/touzbi/Downloads/.nsfw/px/mldl${date:yyyyMMdd}/logs/mldl${date:hh}.log
+		<Property name="externalFileName">./ansa/${date:yyyyMMdd}/logs/${date:hh}.log
 		</Property>
 	</Properties>
 
