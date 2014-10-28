@@ -1,5 +1,7 @@
 package com.touzbi.ansatest.filecontentwrappertest;
 
+import org.junit.Test;
+
 import com.touzbi.ansa.util.fileutils.filecontentwrapper.BasicFileContentWrapper;
 import com.touzbi.ansa.util.fileutils.filecontentwrapper.FileContentWrapper;
 

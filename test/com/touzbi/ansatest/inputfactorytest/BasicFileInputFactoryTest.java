@@ -1,5 +1,7 @@
 package com.touzbi.ansatest.inputfactorytest;
 
+import org.junit.Test;
+
 import com.touzbi.ansa.inputfactory.BasicFileInputFactory;
 import com.touzbi.ansa.inputfactory.InputFactory;
 

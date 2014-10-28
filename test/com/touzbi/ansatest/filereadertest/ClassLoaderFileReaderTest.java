@@ -1,5 +1,7 @@
 package com.touzbi.ansatest.filereadertest;
 
+import org.junit.Test;
+
 import com.touzbi.ansa.util.fileutils.filereaderstrategy.ClassPathRelativeFileReaderStrategy;
 import com.touzbi.ansa.util.fileutils.filereaderstrategy.FileReaderStrategy;
 
